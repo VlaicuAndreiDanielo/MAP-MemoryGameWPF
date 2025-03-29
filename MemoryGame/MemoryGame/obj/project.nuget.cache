@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MEfi9nUTiI72P+DZJlJJtpd3Xl5zCYNiroIDpuKbWrRx0G2Tgyty27B4Nf3qoBtOAQRx03w6a1YkqDT16yh34g==",
+  "success": true,
+  "projectFilePath": "C:\\Computers\\MAP-MemoryGameWPF\\MemoryGame\\MemoryGame\\MemoryGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabian Andronache\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

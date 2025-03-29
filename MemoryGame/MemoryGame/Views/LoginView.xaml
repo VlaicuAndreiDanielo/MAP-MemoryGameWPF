@@ -1,0 +1,71 @@
+﻿<Window x:Class="MemoryGame.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sign In" Height="350" Width="450"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <!-- Definim structura pe 3 randuri si 2 coloane -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Rand pentru titlu -->
+            <RowDefinition Height="*"/>
+            <!-- Rand pentru conținut (listă și imagine) -->
+            <RowDefinition Height="Auto"/>
+            <!-- Rand pentru butoane -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Coloana pentru ListBox -->
+            <ColumnDefinition Width="*"/>
+            <!-- Coloana pentru imagine și butoane imagine -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Titlul / Mesajul de bun venit -->
+        <TextBlock Text="Wellcome Enjoy this game!" 
+                   FontSize="16" 
+                   FontWeight="Bold"
+                   Foreground="DarkRed"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"
+                   Grid.Row="0" Grid.ColumnSpan="2"/>
+
+        <!-- ListBox cu utilizatori -->
+        <ListBox x:Name="UserList"
+                 ItemsSource="{Binding Users}"
+                 SelectedItem="{Binding SelectedUser}"
+                 DisplayMemberPath="Name"
+                 Width="120"
+                 Grid.Row="1" Grid.Column="0" 
+                 Margin="0,0,10,0" />
+
+        <!-- Imagine utilizator și butoane pentru navigare imagine -->
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="{Binding SelectedUser.ImagePath}"
+                   Width="120" Height="120"
+                   Stretch="Uniform"
+                   Margin="0,0,0,10"/>
+            <!-- Butoane pentru navigare imagine (doar ca exemplu) -->
+        </StackPanel>
+
+        <!-- Butoanele de jos -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0">
+            <Button Content="New User"
+                    Command="{Binding CreateUserCommand}"
+                    Width="80" Margin="5,0"/>
+            <Button Content="Delete User"
+                    Command="{Binding DeleteUserCommand}"
+                    Width="80" Margin="5,0"/>
+            <Button Content="Play"
+                    Command="{Binding PlayCommand}"
+                    Width="80" Margin="5,0"/>
+            <Button Content="Cancel"
+                    Command="{Binding CancelCommand}"
+                    Width="80" Margin="5,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
