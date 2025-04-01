@@ -9,6 +9,89 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images cards\**" />
+    <Compile Remove="Images Flowers\**" />
+    <EmbeddedResource Remove="Images cards\**" />
+    <EmbeddedResource Remove="Images Flowers\**" />
+    <None Remove="Images cards\**" />
+    <None Remove="Images Flowers\**" />
+    <Page Remove="Images cards\**" />
+    <Page Remove="Images Flowers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ImagesCards\default_card_front.png" />
+    <None Remove="ImagesFlowers\flower1.png" />
+    <None Remove="ImagesFlowers\flower10.png" />
+    <None Remove="ImagesFlowers\flower11.png" />
+    <None Remove="ImagesFlowers\flower12.png" />
+    <None Remove="ImagesFlowers\flower13.png" />
+    <None Remove="ImagesFlowers\flower14.png" />
+    <None Remove="ImagesFlowers\flower15.png" />
+    <None Remove="ImagesFlowers\flower16.png" />
+    <None Remove="ImagesFlowers\flower17.png" />
+    <None Remove="ImagesFlowers\flower18.png" />
+    <None Remove="ImagesFlowers\flower19.png" />
+    <None Remove="ImagesFlowers\flower2.png" />
+    <None Remove="ImagesFlowers\flower20.png" />
+    <None Remove="ImagesFlowers\flower21.png" />
+    <None Remove="ImagesFlowers\flower22.png" />
+    <None Remove="ImagesFlowers\flower23.png" />
+    <None Remove="ImagesFlowers\flower24.png" />
+    <None Remove="ImagesFlowers\flower25.png" />
+    <None Remove="ImagesFlowers\flower26.png" />
+    <None Remove="ImagesFlowers\flower27.png" />
+    <None Remove="ImagesFlowers\flower28.png" />
+    <None Remove="ImagesFlowers\flower29.png" />
+    <None Remove="ImagesFlowers\flower3.png" />
+    <None Remove="ImagesFlowers\flower30.png" />
+    <None Remove="ImagesFlowers\flower31.png" />
+    <None Remove="ImagesFlowers\flower32.png" />
+    <None Remove="ImagesFlowers\flower33.png" />
+    <None Remove="ImagesFlowers\flower34.png" />
+    <None Remove="ImagesFlowers\flower35.png" />
+    <None Remove="ImagesFlowers\flower36.png" />
+    <None Remove="ImagesFlowers\flower37.png" />
+    <None Remove="ImagesFlowers\flower38.png" />
+    <None Remove="ImagesFlowers\flower39.png" />
+    <None Remove="ImagesFlowers\flower4.png" />
+    <None Remove="ImagesFlowers\flower40.png" />
+    <None Remove="ImagesFlowers\flower41.png" />
+    <None Remove="ImagesFlowers\flower42.png" />
+    <None Remove="ImagesFlowers\flower43.png" />
+    <None Remove="ImagesFlowers\flower44.png" />
+    <None Remove="ImagesFlowers\flower45.png" />
+    <None Remove="ImagesFlowers\flower46.png" />
+    <None Remove="ImagesFlowers\flower47.png" />
+    <None Remove="ImagesFlowers\flower48.png" />
+    <None Remove="ImagesFlowers\flower49.png" />
+    <None Remove="ImagesFlowers\flower5.png" />
+    <None Remove="ImagesFlowers\flower50.png" />
+    <None Remove="ImagesFlowers\flower51.png" />
+    <None Remove="ImagesFlowers\flower52.png" />
+    <None Remove="ImagesFlowers\flower53.png" />
+    <None Remove="ImagesFlowers\flower54.png" />
+    <None Remove="ImagesFlowers\flower55.png" />
+    <None Remove="ImagesFlowers\flower56.png" />
+    <None Remove="ImagesFlowers\flower57.png" />
+    <None Remove="ImagesFlowers\flower58.png" />
+    <None Remove="ImagesFlowers\flower59.png" />
+    <None Remove="ImagesFlowers\flower6.png" />
+    <None Remove="ImagesFlowers\flower60.png" />
+    <None Remove="ImagesFlowers\flower61.png" />
+    <None Remove="ImagesFlowers\flower62.png" />
+    <None Remove="ImagesFlowers\flower63.png" />
+    <None Remove="ImagesFlowers\flower64.png" />
+    <None Remove="ImagesFlowers\flower65.png" />
+    <None Remove="ImagesFlowers\flower66.png" />
+    <None Remove="ImagesFlowers\flower67.png" />
+    <None Remove="ImagesFlowers\flower68.png" />
+    <None Remove="ImagesFlowers\flower69.png" />
+    <None Remove="ImagesFlowers\flower7.png" />
+    <None Remove="ImagesFlowers\flower70.png" />
+    <None Remove="ImagesFlowers\flower71.png" />
+    <None Remove="ImagesFlowers\flower8.png" />
+    <None Remove="ImagesFlowers\flower9.png" />
     <None Remove="Images\avatar1.png" />
     <None Remove="Images\avatar10.png" />
     <None Remove="Images\avatar11.png" />
@@ -39,9 +122,223 @@
     <None Remove="Images\avatar7.png" />
     <None Remove="Images\avatar8.png" />
     <None Remove="Images\avatar9.png" />
+    <None Remove="Images\AvatarSpecial.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ImagesFlowers\flower13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImagesCards\default_card_front.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower61.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower62.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower63.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower66.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower68.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower69.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower71.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFlowers\flower9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\avatar1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -130,6 +427,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\avatar9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AvatarSpecial.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

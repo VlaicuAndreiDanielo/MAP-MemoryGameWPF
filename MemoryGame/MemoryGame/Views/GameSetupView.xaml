@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MemoryGame.Views.GameSetupView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Game Setup" Height="300" Width="400">
+        Title="Game Setup" Height="500" Width="300">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -31,7 +31,7 @@
                 <TextBlock Text="Rows:" Margin="0,5"/>
                 <TextBox Width="30" Text="{Binding Rows}"/>
                 <TextBlock Text="Cols:" Margin="10,5,0,5"/>
-                <TextBox Width="30" Text="{Binding Columns}"/>
+                <TextBox Width="51" Text="{Binding Columns}"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">

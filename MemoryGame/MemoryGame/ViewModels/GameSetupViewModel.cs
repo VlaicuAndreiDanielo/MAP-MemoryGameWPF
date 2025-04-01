@@ -11,7 +11,7 @@ namespace MemoryGame.ViewModels
     {
         private User _currentUser;
         private string _selectedLevel = "easy"; // default
-        private string _selectedModule = "animale"; // default
+        private string _selectedModule = "flori"; // default
         private int _rows = 4;
         private int _columns = 4;
         private int _time = 60;
@@ -61,29 +61,29 @@ namespace MemoryGame.ViewModels
 
         private void PlayGame(object parameter)
         {
-            // Inițializează un nou Game
             var newGame = new Game
             {
                 Level = SelectedLevel,
                 Module = SelectedModule,
                 Rows = Rows,
                 Columns = Columns,
-                TimeRemaining = Time,
-                // Cards se vor genera la momentul pornirii jocului
+                TimeRemaining = Time,  // Time e în secunde
+                Cards = new List<CardState>()
             };
 
-            // Deschide GameView cu noul Game
+
             var gameView = new GameView();
+            // Apelăm constructorul care va genera cardurile dacă newGame.Cards este null/goal
             var gameVM = new GameViewModel(_currentUser, newGame);
             gameView.DataContext = gameVM;
             gameView.Show();
 
-            // Închide fereastra curentă (GameSetupView)
             if (parameter is Window window)
             {
                 window.Close();
             }
         }
+
 
         private void GoBack(object parameter)
         {
