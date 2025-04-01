@@ -1,0 +1,56 @@
+﻿<Window x:Class="MemoryGame.Views.GameSetupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Setup" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Aici selectăm nivelul, modul, size, timp -->
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <TextBlock Text="Select Level:"/>
+            <ComboBox SelectedItem="{Binding SelectedLevel}" Margin="0,5">
+                <ComboBoxItem Content="easy"/>
+                <ComboBoxItem Content="medium"/>
+                <ComboBoxItem Content="hard"/>
+                <ComboBoxItem Content="custom"/>
+            </ComboBox>
+
+            <TextBlock Text="Select Module:"/>
+            <ComboBox SelectedItem="{Binding SelectedModule}" Margin="0,5">
+                <ComboBoxItem Content="animale"/>
+                <ComboBoxItem Content="flori"/>
+                <ComboBoxItem Content="memes"/>
+                <!-- ... -->
+            </ComboBox>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Rows:" Margin="0,5"/>
+                <TextBox Width="30" Text="{Binding Rows}"/>
+                <TextBlock Text="Cols:" Margin="10,5,0,5"/>
+                <TextBox Width="30" Text="{Binding Columns}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Time (sec):" Margin="0,5"/>
+                <TextBox Width="50" Text="{Binding Time}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Butoane de control -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Back" Width="60" Margin="5"
+                    Command="{Binding BackCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+            <Button Content="Play" Width="60" Margin="5"
+                    Command="{Binding PlayCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+            <Button Content="Continue" Width="70" Margin="5"
+                    Command="{Binding ContinueCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+        </StackPanel>
+    </Grid>
+</Window>

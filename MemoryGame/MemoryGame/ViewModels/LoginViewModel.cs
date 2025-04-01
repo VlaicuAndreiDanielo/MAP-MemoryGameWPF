@@ -94,14 +94,13 @@ namespace MemoryGame.ViewModels
                 var json = File.ReadAllText(UsersFilePath);
                 Users = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
             }
-            else
-            {
+            ////////////////////////////////////////////
                 Users = new ObservableCollection<User>
                 {
-                    new User { Name = "Alice", ImagePath = "Images/alice.png" },
-                    new User { Name = "Bob", ImagePath = "Images/bob.png" }
+                    new User { Name = "Alice", ImagePath = "Images/avatar1.png" },
+                    new User { Name = "Bob", ImagePath = "Images/avatar2.png" }
                 };
-            }
+            
         }
 
         private void PlayGame(object parameter)

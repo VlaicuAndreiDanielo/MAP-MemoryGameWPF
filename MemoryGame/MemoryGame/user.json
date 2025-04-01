@@ -1,10 +1,10 @@
 [
   {
     "Name": "Alice",
-    "ImagePath": "Images/alice.png"
+    "ImagePath": "Images/avatar1.png"
   },
   {
     "Name": "Bob",
-    "ImagePath": "Images/bob.png"
+    "ImagePath": "Images/avatar2.png"
   }
 ]
