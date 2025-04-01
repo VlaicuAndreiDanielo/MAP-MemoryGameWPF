@@ -7,13 +7,14 @@ using Newtonsoft.Json;
 using System.IO;  // Added for File operations
 using System.Windows;
 using MemoryGame.Views;
+using MemoryGame.Services;
 
 namespace MemoryGame.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
         private User _selectedUser;
-        private const string UsersFilePath = "users.json";
+        private string UsersFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "users.json");
 
         public ObservableCollection<User> Users { get; set; }
 
@@ -50,40 +51,92 @@ namespace MemoryGame.ViewModels
 
         private void CreateUser(object parameter)
         {
-            // Instanțiere fereastră, nu ViewModel
+            // Deschide fereastra de creare a user-ului
             var createUserView = new CreateUserView();
-
-            // Acum poți apela ShowDialog() fiindcă createUserView e un Window
             bool? result = createUserView.ShowDialog();
-
             if (result == true)
             {
-                // Preiei ViewModel-ul din DataContext
+                // Preia ViewModel-ul din fereastră
                 var vm = createUserView.DataContext as CreateUserViewModel;
                 if (vm != null && vm.NewUser != null)
                 {
-                    Users.Add(vm.NewUser);
-                    SaveUsers();
+                    // Încarcă lista de useri din JSON
+                    var users = UserManager.LoadUsers();
+                    // Adaugă noul user
+                    users.Add(vm.NewUser);
+                    // Salvează modificările
+                    UserManager.SaveUsers(users);
+                    MessageBox.Show("User created successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    // Dacă parametru este LoginViewModel, actualizează colecția de useri din UI
+                    if (parameter is LoginViewModel loginVM)
+                    {
+                        var updatedUsers = UserManager.LoadUsers();
+                        loginVM.Users.Clear();
+                        foreach (var user in updatedUsers)
+                        {
+                            loginVM.Users.Add(user);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("User creation failed.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-        }
-
-
-
-        private void SaveUsers()
-        {
-            // Resolved Formatting ambiguity by fully qualifying Newtonsoft.Json
-            var json = JsonConvert.SerializeObject(Users, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(UsersFilePath, json);
         }
 
         private void DeleteUser(object parameter)
         {
             if (SelectedUser != null)
             {
-                Users.Remove(SelectedUser);
-                SelectedUser = null;
-                SaveUsers();  // Added to persist changes
+                // Deschide fereastra de confirmare cu numele userului
+                var confirmWindow = new ConfirmDeleteView(SelectedUser.Name);
+                bool? result = confirmWindow.ShowDialog();
+
+                if (result == true)
+                {
+                    var users = UserManager.LoadUsers();
+                    if (users == null)
+                    {
+                        MessageBox.Show("Users is null!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    bool found = false;
+                    // Parcurgem lista și ștergem userul care corespunde după nume
+                    for (int i = 0; i < users.Count; i++)
+                    {
+                        if (users[i].Name == SelectedUser.Name)
+                        {
+                            users.RemoveAt(i);
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (found)
+                    {
+                        // Salvează lista actualizată în JSON
+                        UserManager.SaveUsers(users);
+                        // Actualizează colecția locală pentru ca UI-ul să se reîmprospăteze
+                        Users.Clear();
+                        foreach (var user in users)
+                        {
+                            Users.Add(user);
+                        }
+                        SelectedUser = null;
+                        MessageBox.Show("User deleted successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("User not found.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No user selected for deletion.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -93,33 +146,50 @@ namespace MemoryGame.ViewModels
             {
                 var json = File.ReadAllText(UsersFilePath);
                 Users = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
-            }
-            ////////////////////////////////////////////
-                Users = new ObservableCollection<User>
+                if (Users == null)
                 {
-                    new User { Name = "Alice", ImagePath = "Images/avatar1.png" },
-                    new User { Name = "Bob", ImagePath = "Images/avatar2.png" }
-                };
-            
+                    Users = new ObservableCollection<User>();
+                }
+            }
+            else
+            {
+                Users = new ObservableCollection<User>();
+            }
         }
 
         private void PlayGame(object parameter)
         {
-            if (SelectedUser != null)
+            if (parameter is User user)
             {
-                var gameView = new GameView();
-                // Create GameViewModel with parameterless constructor temporarily
-                gameView.DataContext = new GameViewModel();
-                gameView.Show();
-
-                foreach (Window window in Application.Current.Windows)
+                if (user.SavedGame != null)
                 {
-                    if (window is LoginView)
+                    MessageBoxResult res = MessageBox.Show("A saved game exists. Do you want to continue it?",
+                                                             "Continue Game",
+                                                             MessageBoxButton.YesNo,
+                                                             MessageBoxImage.Question);
+                    if (res == MessageBoxResult.Yes)
                     {
-                        window.Close();
-                        break;
+                        var gameView = new GameView();
+                        gameView.DataContext = new GameViewModel(user, user.SavedGame);
+                        gameView.Show();
+                    }
+                    else
+                    {
+                        var setupView = new GameSetupView();
+                        setupView.DataContext = new GameSetupViewModel(user);
+                        setupView.Show();
                     }
                 }
+                else
+                {
+                    var setupView = new GameSetupView();
+                    setupView.DataContext = new GameSetupViewModel(user);
+                    setupView.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a user to play.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

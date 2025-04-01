@@ -35,10 +35,12 @@ C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\Me
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\MemoryGame.pdb
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MemoryGame.csproj.AssemblyReference.cache
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\ConfirmDeleteView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameSetupView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\PauseWindow.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\ConfirmDeleteView.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\CreateUserView.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameSetupView.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameView.g.cs
