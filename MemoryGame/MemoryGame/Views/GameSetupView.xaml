@@ -9,35 +9,50 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Aici selectăm nivelul, modul, size, timp -->
+        <!-- Secțiunea de configurare -->
         <StackPanel Orientation="Vertical" Grid.Row="0">
             <TextBlock Text="Select Level:"/>
-            <ComboBox SelectedItem="{Binding SelectedLevel}" Margin="0,5">
+            <ComboBox SelectedValue="{Binding SelectedLevel}" SelectedValuePath="Content" Margin="0,5">
+                <ComboBoxItem Content="baby mode"/>
                 <ComboBoxItem Content="easy"/>
                 <ComboBoxItem Content="medium"/>
                 <ComboBoxItem Content="hard"/>
+                <ComboBoxItem Content="very hard"/>
+                <ComboBoxItem Content="intermediate"/>
+                <ComboBoxItem Content="challenging"/>
+                <ComboBoxItem Content="expert"/>
+                <ComboBoxItem Content="nightmare"/>
+                <ComboBoxItem Content="hell mode"/>
+                <ComboBoxItem Content="insane"/>
+                <ComboBoxItem Content="god mode"/>
                 <ComboBoxItem Content="custom"/>
             </ComboBox>
 
+
             <TextBlock Text="Select Module:"/>
-            <ComboBox SelectedItem="{Binding SelectedModule}" Margin="0,5">
+            <ComboBox SelectedValue="{Binding SelectedModule}" SelectedValuePath="Content" Margin="0,5">
                 <ComboBoxItem Content="animale"/>
                 <ComboBoxItem Content="flori"/>
-                <ComboBoxItem Content="memes"/>
-                <!-- ... -->
+                <ComboBoxItem Content="copaci"/>
+                <ComboBoxItem Content="legume"/>
+                <ComboBoxItem Content="fructe"/>
+                <ComboBoxItem Content="roci"/>
+                <ComboBoxItem Content="peisaje"/>
+                <ComboBoxItem Content="random"/>
             </ComboBox>
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Rows:" Margin="0,5"/>
-                <TextBox Width="30" Text="{Binding Rows}"/>
+                <TextBox Width="30" Text="{Binding Rows}" IsEnabled="{Binding IsSizeEditable}"/>
                 <TextBlock Text="Cols:" Margin="10,5,0,5"/>
-                <TextBox Width="51" Text="{Binding Columns}"/>
+                <TextBox Width="51" Text="{Binding Columns}" IsEnabled="{Binding IsSizeEditable}"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Time (sec):" Margin="0,5"/>
-                <TextBox Width="50" Text="{Binding Time}"/>
+                <TextBox Width="50" Text="{Binding Time}" IsEnabled="{Binding IsTimeEditable}"/>
             </StackPanel>
+
         </StackPanel>
 
         <!-- Butoane de control -->

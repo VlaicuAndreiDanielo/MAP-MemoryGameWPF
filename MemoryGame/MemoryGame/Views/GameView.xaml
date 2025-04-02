@@ -20,7 +20,7 @@
                  VerticalAlignment="Center"
                  FontSize="16" FontWeight="Bold" Foreground="Red"/>
             <Button Content="Pause" Command="{Binding PauseCommand}"
-              Grid.Column="1" Margin="10,0"/>
+              Grid.Column="1" Margin="5,0"/>
         </Grid>
 
         <!-- Gridul cu carduri -->
@@ -35,15 +35,12 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Command="{Binding DataContext.CardFlipCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-        CommandParameter="{Binding}"
-        BorderBrush="Black" BorderThickness="2" Background="White">
+                            CommandParameter="{Binding}"
+                            BorderBrush="Black" BorderThickness="2" Background="White">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Grid>
                                     <Image x:Name="CardImage" Stretch="Uniform"/>
-                                    <!-- Opțional: afișează coordonatele pentru debug -->
-                                    <TextBlock Text="{Binding Row}" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding Column}" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="Blue" FontWeight="Bold"/>
                                 </Grid>
                                 <ControlTemplate.Triggers>
                                     <!-- Dacă ShowFront este false, afișează imaginea de spate -->

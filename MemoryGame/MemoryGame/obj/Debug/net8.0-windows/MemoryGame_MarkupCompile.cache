@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\App.xaml
-71255841705
-101-577683724
-25-1536422639
+8-378930484
+2821817659884
+27-750149674
 199-1530353166
-MainWindow.xaml;Views\ConfirmDeleteView.xaml;Views\CreateUserView.xaml;Views\GameSetupView.xaml;Views\GameView.xaml;Views\LoginView.xaml;Views\PauseWindow.xaml;
+MainWindow.xaml;Views\ConfirmDeleteView.xaml;Views\CreateUserView.xaml;Views\GameOverView.xaml;Views\GameSetupView.xaml;Views\GameView.xaml;Views\LoginView.xaml;Views\PauseWindow.xaml;
 
 False
 

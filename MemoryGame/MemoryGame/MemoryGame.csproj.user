@@ -13,6 +13,9 @@
     <Compile Update="Views\CreateUserView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\GameOverView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\GameSetupView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CreateUserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GameOverView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\GameSetupView.xaml">

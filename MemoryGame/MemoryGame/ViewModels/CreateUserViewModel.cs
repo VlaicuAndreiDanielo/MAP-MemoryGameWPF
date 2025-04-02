@@ -23,7 +23,7 @@ namespace MemoryGame.ViewModels
                 "Images/avatar13.png","Images/avatar14.png","Images/avatar15.png","Images/avatar16.png","Images/avatar17.png","Images/avatar18.png",
                 "Images/avatar19.png","Images/avatar20.png","Images/avatar21.png","Images/avatar22.png","Images/avatar23.png","Images/avatar24.png",
                 "Images/avatar25.png","Images/avatar26.png","Images/avatar27.png","Images/avatar28.png","Images/avatar29.png","Images/avatar30.png",
-                "Images/AvatarSpecial.png"
+                "Images/AvatarSpecial.png","Images/AvatarSpecial2.png","Images/AvatarSpecial3.png"
             };
             _selectedAvatarIndex = 0;
 

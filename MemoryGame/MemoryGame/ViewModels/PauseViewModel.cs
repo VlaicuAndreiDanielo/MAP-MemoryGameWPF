@@ -10,75 +10,79 @@ namespace MemoryGame.ViewModels
     public class PauseViewModel : INotifyPropertyChanged
     {
         private User _currentUser;
-        private Game _currentGame;
+        private GameViewModel _gameVM;
 
-        public PauseViewModel(User user, Game game)
+        public PauseViewModel(User user, GameViewModel gameVM)
         {
             _currentUser = user;
-            _currentGame = game;
-
+            _gameVM = gameVM;
             ContinueCommand = new RelayCommand(ContinueGame);
             SaveCommand = new RelayCommand(SaveGame);
             QuitCommand = new RelayCommand(QuitGame);
         }
-        public PauseViewModel()
-        {
-           
-        }
+
         public ICommand ContinueCommand { get; }
         public ICommand SaveCommand { get; }
         public ICommand QuitCommand { get; }
 
         private void ContinueGame(object parameter)
         {
-            // Închide doar fereastra de pauză
             if (parameter is Window window)
             {
                 window.Close();
             }
+            _gameVM.ResumeTimer();
         }
 
         private void SaveGame(object parameter)
         {
-            // Salvează starea actuală a jocului în _currentUser.SavedGame
-            _currentUser.SavedGame = _currentGame;
-            // Actualizează users.json
+            // Actualizează starea jocului curent
+            Game currentGameState = _gameVM.GetCurrentGameState();
+            _currentUser.SavedGame = currentGameState;
             var users = UserManager.LoadUsers();
-            // Găsește userul actual în listă, actualizează-l
             for (int i = 0; i < users.Count; i++)
             {
                 if (users[i].Name == _currentUser.Name)
                 {
-                    users[i].SavedGame = _currentGame;
+                    users[i].SavedGame = currentGameState;
                     break;
                 }
             }
             UserManager.SaveUsers(users);
 
-            // Închide fereastra de pauză
             if (parameter is Window window)
             {
                 window.Close();
             }
+            _gameVM.ResumeTimer();
+
+            foreach (Window w in Application.Current.Windows)
+            {
+                if (w is Views.GameView || w is Views.PauseWindow)
+                {
+                    w.Close();
+                }
+            }
+            var loginView = new Views.LoginView();
+            loginView.Show();
         }
 
         private void QuitGame(object parameter)
         {
-            // Închide fereastra de pauză și, eventual, fereastra de joc principal
-            // Aici decizi tu cum să te întorci la Login sau la alt ecran
-            if (parameter is Window window)
+            // Închide fereastra de pauză și jocul, apoi revine la Login
+            foreach (Window w in Application.Current.Windows)
             {
-                window.Close();
+                if (w is Views.GameView || w is Views.PauseWindow)
+                {
+                    w.Close();
+                }
             }
-
-            // Poți să mai cauți fereastra principală de joc și să o închizi
-            // ...
+            var loginView = new Views.LoginView();
+            loginView.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
