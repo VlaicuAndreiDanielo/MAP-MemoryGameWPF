@@ -184,7 +184,6 @@ C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Vi
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameSetupView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\PauseWindow.baml
-C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\ConfirmDeleteView.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\CreateUserView.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameSetupView.g.cs
@@ -196,7 +195,6 @@ C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Me
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MemoryGame_MarkupCompile.cache
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MemoryGame_MarkupCompile.lref
-C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\CreateUserView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\LoginView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\MemoryGame.g.resources
@@ -320,3 +318,20 @@ C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\Im
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\ImagesVegetables\vegetable9.jpg
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameOverView.baml
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\GameOverView.g.cs
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\WinView.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\WinView.g.cs
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\StatisticsView.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\StatisticsView.g.cs
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\bin\Debug\net8.0-windows\MemoryGame.dll.config
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\BabyPinkTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\DeepBlueTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\DeepOrangeTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\ForestGreenTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\HeavenLightTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\IntenseVioletTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\PaleLavenderTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\QuantumRedTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\SunnyYellowTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Themes\TotalDarknessTheme.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\ThemePickerView.baml
+C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\obj\Debug\net8.0-windows\Views\ThemePickerView.g.cs

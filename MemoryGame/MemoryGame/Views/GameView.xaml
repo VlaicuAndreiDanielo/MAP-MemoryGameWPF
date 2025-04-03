@@ -2,52 +2,55 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Memory Game" Height="600" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Timer + buton Pause (toolbar) -->
+        <!-- Bara de sus: Timer + buton de pauză -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock Text="{Binding TimeRemaining}" 
-                 HorizontalAlignment="Center" 
-                 VerticalAlignment="Center"
-                 FontSize="16" FontWeight="Bold" Foreground="Red"/>
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       FontSize="16" FontWeight="Bold" Foreground="Red"/>
             <Button Content="Pause" Command="{Binding PauseCommand}"
-              Grid.Column="1" Margin="5,0"/>
+                    Grid.Column="1" Margin="5,0"
+                    Style="{DynamicResource ButtonStyle}"/>
         </Grid>
 
-        <!-- Gridul cu carduri -->
+        <!-- Zona de joc: Lista de carduri -->
         <ItemsControl Grid.Row="1" ItemsSource="{Binding Cards}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid 
-            Rows="{Binding DataContext.Rows, RelativeSource={RelativeSource AncestorType=Window}}"
-            Columns="{Binding DataContext.Columns, RelativeSource={RelativeSource AncestorType=Window}}" />
+                    <UniformGrid Rows="{Binding DataContext.Rows, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 Columns="{Binding DataContext.Columns, RelativeSource={RelativeSource AncestorType=Window}}"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Command="{Binding DataContext.CardFlipCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                             CommandParameter="{Binding}"
-                            BorderBrush="Black" BorderThickness="2" Background="White">
+                            BorderBrush="Black" BorderThickness="2"
+                            Background="White">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Grid>
                                     <Image x:Name="CardImage" Stretch="Uniform"/>
                                 </Grid>
                                 <ControlTemplate.Triggers>
-                                    <!-- Dacă ShowFront este false, afișează imaginea de spate -->
+                                    <!-- Dacă ShowFront este fals, se afișează spatele cardului -->
                                     <DataTrigger Binding="{Binding ShowFront}" Value="False">
                                         <Setter TargetName="CardImage" Property="Source" Value="../ImagesCards/default_card_front.png"/>
                                     </DataTrigger>
-                                    <!-- Dacă ShowFront este true, afișează imaginea de față (FrontImage) -->
+                                    <!-- Dacă ShowFront este adevărat, se afișează imaginea de față -->
                                     <DataTrigger Binding="{Binding ShowFront}" Value="True">
                                         <Setter TargetName="CardImage" Property="Source" Value="{Binding FrontImage}"/>
                                     </DataTrigger>
@@ -55,8 +58,6 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
-
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

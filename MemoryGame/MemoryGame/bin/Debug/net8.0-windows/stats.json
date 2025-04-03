@@ -1,0 +1,20 @@
+[
+  {
+    "UserName": "andrei",
+    "TotalGames": 1,
+    "Wins": 1,
+    "Losses": 0,
+    "Difficulties": {
+      "Easy Mode": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    }
+  }
+]

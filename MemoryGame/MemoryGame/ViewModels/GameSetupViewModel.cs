@@ -4,14 +4,15 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows;
 using MemoryGame.Views;
+using MemoryGame.Services;
 
 namespace MemoryGame.ViewModels
 {
     public class GameSetupViewModel : INotifyPropertyChanged
     {
         private User _currentUser;
-        private string _selectedLevel = "easy"; // default
-        private string _selectedModule = "flori"; // default
+        private string _selectedLevel = Settings.Default.LastGameMode; 
+        private string _selectedModule = Settings.Default.LastCategory; 
         private int _rows = 4;
         private int _columns = 4;
         private int _time = 60;
@@ -22,6 +23,7 @@ namespace MemoryGame.ViewModels
             PlayCommand = new RelayCommand(PlayGame);
             BackCommand = new RelayCommand(GoBack);
             ContinueCommand = new RelayCommand(ContinueGame, CanContinueGame);
+            ClearSavedGameCommand = new RelayCommand(ClearSavedGame, CanClearSavedGame);
         }
 
         public string SelectedLevel
@@ -35,14 +37,16 @@ namespace MemoryGame.ViewModels
                 OnPropertyChanged(nameof(IsTimeEditable));  // notificăm schimbarea timpului
 
                 // Setează automat valorile pentru rânduri, coloane și timp în funcție de nivel
-                switch (value.ToLower())
+                switch (value)
                 {
-                    case "baby mode":
+                    case "Baby Mode":
                         Rows = 2;
                         Columns = 2;
                         Time = 30; // secunde
+                        Settings.Default.LastGameMode = "Baby Mode";
+                        Settings.Default.Save();
                         break;
-                    case "easy":
+                    case "Easy Mode":
                         // Random între 2x3 și 3x2
                         if (new Random().Next(2) == 0)
                         {
@@ -55,8 +59,10 @@ namespace MemoryGame.ViewModels
                             Columns = 2;
                         }
                         Time = 45;
+                        Settings.Default.LastGameMode = "Easy Mode";
+                        Settings.Default.Save();
                         break;
-                    case "medium":
+                    case "Medium Mode":
                         // Random între 3x4, 4x3 și 4x4
                         int m = new Random().Next(3);
                         if (m == 0)
@@ -75,8 +81,10 @@ namespace MemoryGame.ViewModels
                             Columns = 4;
                         }
                         Time = 50;
+                        Settings.Default.LastGameMode = "Medium Mode";
+                        Settings.Default.Save();
                         break;
-                    case "hard":
+                    case "Hard Mode":
                         // Random între 5x6 și 6x5
                         if (new Random().Next(2) == 0)
                         {
@@ -89,13 +97,17 @@ namespace MemoryGame.ViewModels
                             Columns = 5;
                         }
                         Time = 60;
+                        Settings.Default.LastGameMode = "Hard Mode";
+                        Settings.Default.Save();
                         break;
-                    case "very hard":
+                    case "Very Hard Mode":
                         Rows = 6;
                         Columns = 6;
                         Time = 80; // 1 min 20 sec
+                        Settings.Default.LastGameMode = "Very Hard Mode";
+                        Settings.Default.Save();
                         break;
-                    case "intermediate":
+                    case "Intermediate Mode":
                         // Random între 4x5 și 5x4
                         if (new Random().Next(2) == 0)
                         {
@@ -108,13 +120,17 @@ namespace MemoryGame.ViewModels
                             Columns = 4;
                         }
                         Time = 55;
+                        Settings.Default.LastGameMode = "Intermediate Mode";
+                        Settings.Default.Save();
                         break;
-                    case "challenging":
+                    case "Challenging Mode":
                         Rows = 6;
                         Columns = 6;
                         Time = 60;
+                        Settings.Default.LastGameMode = "Challenging Mode";
+                        Settings.Default.Save();
                         break;
-                    case "expert":
+                    case "Expert Mode":
                         // Random între 6x7 și 7x6
                         if (new Random().Next(2) == 0)
                         {
@@ -127,8 +143,10 @@ namespace MemoryGame.ViewModels
                             Columns = 6;
                         }
                         Time = 60;
+                        Settings.Default.LastGameMode = "Expert Mode";
+                        Settings.Default.Save();
                         break;
-                    case "nightmare":
+                    case "Nightmare Mode":
                         // Random între 7x8 și 8x7
                         if (new Random().Next(2) == 0)
                         {
@@ -141,8 +159,10 @@ namespace MemoryGame.ViewModels
                             Columns = 7;
                         }
                         Time = 120; // 2 min
+                        Settings.Default.LastGameMode = "Nightmare Mode";
+                        Settings.Default.Save();
                         break;
-                    case "hell mode":
+                    case "Hell Mode":
                         // Random între 8x9, 9x8 și 8x8
                         int h = new Random().Next(3);
                         if (h == 0)
@@ -161,8 +181,10 @@ namespace MemoryGame.ViewModels
                             Columns = 8;
                         }
                         Time = 150; // 2 min 30 sec
+                        Settings.Default.LastGameMode = "Hell Mode";
+                        Settings.Default.Save();
                         break;
-                    case "insane":
+                    case "Insane Mode":
                         // Random între 9x10 și 10x9
                         if (new Random().Next(2) == 0)
                         {
@@ -175,16 +197,24 @@ namespace MemoryGame.ViewModels
                             Columns = 9;
                         }
                         Time = 210; // 3 min 30 sec
+                        Settings.Default.LastGameMode = "Insane Mode";
+                        Settings.Default.Save();
                         break;
-                    case "god mode":
+                    case "God Mode":
                         Rows = 10;
                         Columns = 10;
                         Time = 300; // 5 min
+                        Settings.Default.LastGameMode = "God Mode";
+                        Settings.Default.Save();
                         break;
-                    case "custom":
+                    case "Custom Mode":
                         // Permite editarea
+                        Settings.Default.LastGameMode = "Custom Mode";
+                        Settings.Default.Save();
                         break;
                     default:
+                        Settings.Default.LastGameMode = "Easy Mode";
+                        Settings.Default.Save();
                         break;
                 }
                 OnPropertyChanged(nameof(Rows));
@@ -193,13 +223,16 @@ namespace MemoryGame.ViewModels
             }
         }
 
-        public bool IsSizeEditable => SelectedLevel.ToLower() == "custom";
-        public bool IsTimeEditable => SelectedLevel.ToLower() == "custom";
+        public bool IsSizeEditable => SelectedLevel.ToLower() == "Custom Mode";
+        public bool IsTimeEditable => SelectedLevel.ToLower() == "Custom Mode";
 
         public string SelectedModule
         {
             get => _selectedModule;
-            set { _selectedModule = value; OnPropertyChanged(nameof(SelectedModule)); }
+            set { _selectedModule = value; OnPropertyChanged(nameof(SelectedModule));
+                Settings.Default.LastCategory = _selectedModule;
+                Settings.Default.Save();
+            }
         }
 
         public int Rows
@@ -223,6 +256,7 @@ namespace MemoryGame.ViewModels
         public ICommand PlayCommand { get; }
         public ICommand BackCommand { get; }
         public ICommand ContinueCommand { get; }
+        public ICommand ClearSavedGameCommand { get; }
 
         private void PlayGame(object parameter)
         {
@@ -276,6 +310,32 @@ namespace MemoryGame.ViewModels
 
             if (parameter is Window window)
                 window.Close();
+        }
+        // Comandă pentru ștergerea jocului salvat
+        private void ClearSavedGame(object parameter)
+        {
+            _currentUser.SavedGame = null;
+            var users = UserManager.LoadUsers();
+            foreach (var user in users)
+            {
+                if (user.Name.Equals(_currentUser.Name, StringComparison.OrdinalIgnoreCase))
+                {
+                    user.SavedGame = null;
+                    break;
+                }
+            }
+            UserManager.SaveUsers(users);
+
+            // Forțează re-evaluarea comenzilor care folosesc CanExecute
+            CommandManager.InvalidateRequerySuggested();
+
+            MessageBox.Show("Saved game cleared!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
+        private bool CanClearSavedGame(object parameter)
+        {
+            return _currentUser?.SavedGame != null;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

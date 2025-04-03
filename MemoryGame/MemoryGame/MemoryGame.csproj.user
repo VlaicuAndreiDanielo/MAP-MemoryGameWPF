@@ -28,11 +28,17 @@
     <Compile Update="Views\PauseWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\StatisticsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ThemePickerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WinView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\ConfirmDeleteView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -52,6 +58,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PauseWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StatisticsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ThemePickerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WinView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

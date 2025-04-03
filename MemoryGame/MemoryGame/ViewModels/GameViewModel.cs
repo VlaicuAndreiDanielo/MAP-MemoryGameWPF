@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 
@@ -69,11 +70,21 @@ namespace MemoryGame.ViewModels
                 Cards = new ObservableCollection<CardViewModel>(
                     game.Cards.Select((cs, i) =>
                     {
-                        var card = new CardViewModel(cs.ImagePath, Columns);
-                        card.Index = i;
-                        return card;
+                         var card = new CardViewModel(cs.ImagePath, Columns);
+                         card.Index = i;
+                        // Restaurează starea salvată:
+
+                         card.IsMatched = cs.IsMatched;
+                        // Dacă cardul este matched, păstrăm și starea flipuită; altfel, îl punem întotdeauna ca ne-flipuit.
+                         card.IsFlipped = cs.IsMatched ? cs.IsFlipped : false;
+                        // Notificăm UI-ul pentru actualizare:
+                         card.OnPropertyChanged(nameof(card.IsFlipped));
+                         card.OnPropertyChanged(nameof(card.IsMatched));
+                         card.OnPropertyChanged(nameof(card.ShowFront));
+                         return card;
                     })
                 );
+
             }
 
             CardFlipCommand = new RelayCommand(async (param) => await OnCardFlipped(param));
@@ -113,9 +124,11 @@ namespace MemoryGame.ViewModels
                 {
                     ImagePath = c.FrontImage,
                     IsFlipped = c.IsFlipped,
+                    IsMatched = c.IsMatched,     // <-- Adaugă această linie
                     Row = c.Row,
                     Column = c.Column
                 }).ToList()
+
             };
         }
 
@@ -186,6 +199,27 @@ namespace MemoryGame.ViewModels
                     }
                 }
             }
+            if (Cards.All(c => c.IsMatched))
+            {
+                _timer.Stop();
+                // Deschide fereastra de Win pe thread-ul UI
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    var winView = new Views.WinView();
+                    var winVM = new WinViewModel(CurrentUser, GetCurrentGameState());
+                    winView.DataContext = winVM;
+                    winView.Show();
+                    // Închide fereastra de joc
+                    foreach (Window window in Application.Current.Windows)
+                    {
+                        if (window is Views.GameView)
+                        {
+                            window.Close();
+                            break;
+                        }
+                    }
+                });
+            }
         }
         // Metoda pentru deschiderea ferestrei de pauză
         private void OpenPauseWindow(object parameter)
@@ -196,12 +230,11 @@ namespace MemoryGame.ViewModels
             pauseWindow.ShowDialog();
         }
 
-
         private static ObservableCollection<string> GetImages(string module)
         {
-            switch (module.ToLower())
+            switch (module)
             {
-                case "flori":
+                case "Flowers":
                     return new ObservableCollection<string>
                 {
                     "ImagesFlowers/flower1.png",  "ImagesFlowers/flower2.png",  "ImagesFlowers/flower3.png",
@@ -230,7 +263,7 @@ namespace MemoryGame.ViewModels
                     "ImagesFlowers/flower70.png", "ImagesFlowers/flower71.png"
                 };
 
-                case "animale":
+                case "Animals":
                     return new ObservableCollection<string>
                 {
                     "ImagesAnimals/animal1.png", "ImagesAnimals/animal2.png", "ImagesAnimals/animal3.png",
@@ -259,7 +292,7 @@ namespace MemoryGame.ViewModels
                     "ImagesAnimals/animal70.png","ImagesAnimals/animal71.png","ImagesAnimals/animal72.png"
                 };
 
-                case "copaci":
+                case "Trees":
                     return new ObservableCollection<string>
                 {
                     "ImagesTrees/tree1.jpg", "ImagesTrees/tree2.jpg", "ImagesTrees/tree3.jpg",
@@ -278,13 +311,13 @@ namespace MemoryGame.ViewModels
                     "ImagesTrees/tree40.jpg","ImagesTrees/tree41.jpg","ImagesTrees/tree42.jpg"
                 };
 
-                case "fructe":
+                case "Fruits":
                     return new ObservableCollection<string>
             {
                 "ImagesFruits/fruit1.png", "ImagesFruits/fruit2.png"
                 // etc.
             };
-                case "legume":
+                case "Vegetables":
                     return new ObservableCollection<string>
                 {
                     "ImagesVegetables/vegetable1.jpg","ImagesVegetables/vegetable2.jpg","ImagesVegetables/vegetable3.jpg",
@@ -310,7 +343,37 @@ namespace MemoryGame.ViewModels
                     "ImagesVegetables/vegetable61.jpg","ImagesVegetables/vegetable62.jpg","ImagesVegetables/vegetable63.jpg"
                 };
 
-                case "roci":
+                case "Rocks":
+                    return new ObservableCollection<string>
+            {
+                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
+                // etc.
+            };
+                case "Landscapes":
+                    return new ObservableCollection<string>
+            {
+                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
+                // etc.
+            };
+                case "Buildings":
+                    return new ObservableCollection<string>
+            {
+                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
+                // etc.
+            };
+                case "Motorcycle":
+                    return new ObservableCollection<string>
+            {
+                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
+                // etc.
+            };
+                case "Cars":
+                    return new ObservableCollection<string>
+            {
+                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
+                // etc.
+            };
+                case "Random":
                     return new ObservableCollection<string>
             {
                 "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"

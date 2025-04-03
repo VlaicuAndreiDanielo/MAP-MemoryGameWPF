@@ -33,7 +33,10 @@ namespace MemoryGame.ViewModels
         public ICommand DeleteUserCommand { get; }
         public ICommand PlayCommand { get; }
         public ICommand CancelCommand { get; }  // Added initialization in constructor
-
+                                                // Noile comenzi
+        public ICommand HelpCommand { get; }
+        public ICommand StatisticsCommand { get; }
+        public ICommand ThemeCommand { get; }
         public LoginViewModel()
         {
             LoadUsers();
@@ -41,7 +44,11 @@ namespace MemoryGame.ViewModels
             CreateUserCommand = new RelayCommand(CreateUser);
             DeleteUserCommand = new RelayCommand(DeleteUser, CanModifyUser);
             PlayCommand = new RelayCommand(PlayGame, CanModifyUser);
+
+            HelpCommand = new RelayCommand(ShowHelp);
+            StatisticsCommand = new RelayCommand(OpenStatistics);
             CancelCommand = new RelayCommand(CloseWindow);  // Initialize CancelCommand
+            ThemeCommand = new RelayCommand(SwitchTheme);
         }
 
         private bool CanModifyUser(object parameter)
@@ -156,7 +163,26 @@ namespace MemoryGame.ViewModels
                 Users = new ObservableCollection<User>();
             }
         }
+        // Noua comandă Help – afișează un mesaj cu numele și grupa ta
+        private void ShowHelp(object parameter)
+        {
+            MessageBox.Show("Your Name: Vlaicu Andrei Danielo\n" +
+                            "Group: 10LF234", "Help", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        private void SwitchTheme(object parameter)
+        {
 
+            var pickerView = new ThemePickerView();
+            pickerView.DataContext = new ThemePickerViewModel();
+            pickerView.ShowDialog();
+        }
+        // Comandă pentru deschiderea ferestrei de Statistics
+        private void OpenStatistics(object parameter)
+        {
+            var statsView = new StatisticsView();
+            statsView.DataContext = new StatisticsViewModel();
+            statsView.Show();
+        }
         private void PlayGame(object parameter)
         {
             if (parameter is User user)

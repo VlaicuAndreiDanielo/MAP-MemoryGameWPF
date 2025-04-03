@@ -1,71 +1,94 @@
 ﻿<Window x:Class="MemoryGame.Views.GameSetupView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Game Setup" Height="500" Width="300">
+        Title="Game Setup" Height="500" Width="300"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Secțiunea de configurare -->
         <StackPanel Orientation="Vertical" Grid.Row="0">
-            <TextBlock Text="Select Level:"/>
-            <ComboBox SelectedValue="{Binding SelectedLevel}" SelectedValuePath="Content" Margin="0,5">
-                <ComboBoxItem Content="baby mode"/>
-                <ComboBoxItem Content="easy"/>
-                <ComboBoxItem Content="medium"/>
-                <ComboBoxItem Content="hard"/>
-                <ComboBoxItem Content="very hard"/>
-                <ComboBoxItem Content="intermediate"/>
-                <ComboBoxItem Content="challenging"/>
-                <ComboBoxItem Content="expert"/>
-                <ComboBoxItem Content="nightmare"/>
-                <ComboBoxItem Content="hell mode"/>
-                <ComboBoxItem Content="insane"/>
-                <ComboBoxItem Content="god mode"/>
-                <ComboBoxItem Content="custom"/>
+            <TextBlock Text="Select Level:" 
+                       Foreground="{DynamicResource TextBlockForeground}" />
+            <ComboBox SelectedValue="{Binding SelectedLevel}" SelectedValuePath="Content" Margin="0,5"
+                      Background="White" Foreground="Black">
+                <ComboBoxItem Content="Baby Mode"/>
+                <ComboBoxItem Content="Easy Mode"/>
+                <ComboBoxItem Content="Medium Mode"/>
+                <ComboBoxItem Content="Intermediate Mode"/>
+                <ComboBoxItem Content="Hard Mode"/>
+                <ComboBoxItem Content="Very Hard Mode"/>
+                <ComboBoxItem Content="Challenging Mode"/>
+                <ComboBoxItem Content="Expert Mode"/>
+                <ComboBoxItem Content="Nightmare Mode"/>
+                <ComboBoxItem Content="Hell Mode"/>
+                <ComboBoxItem Content="Insane Mode"/>
+                <ComboBoxItem Content="God Mode"/>
+                <ComboBoxItem Content="Custom Mode"/>
             </ComboBox>
 
-
-            <TextBlock Text="Select Module:"/>
-            <ComboBox SelectedValue="{Binding SelectedModule}" SelectedValuePath="Content" Margin="0,5">
-                <ComboBoxItem Content="animale"/>
-                <ComboBoxItem Content="flori"/>
-                <ComboBoxItem Content="copaci"/>
-                <ComboBoxItem Content="legume"/>
-                <ComboBoxItem Content="fructe"/>
-                <ComboBoxItem Content="roci"/>
-                <ComboBoxItem Content="peisaje"/>
-                <ComboBoxItem Content="random"/>
+            <TextBlock Text="Select Module:" 
+                       Foreground="{DynamicResource TextBlockForeground}" />
+            <ComboBox SelectedValue="{Binding SelectedModule}" SelectedValuePath="Content" Margin="0,5"
+                      Background="White" Foreground="Black">
+                <ComboBoxItem Content="Animals"/>
+                <ComboBoxItem Content="Flowers"/>
+                <ComboBoxItem Content="Trees"/>
+                <ComboBoxItem Content="Vegetables"/>
+                <ComboBoxItem Content="Fruits"/>
+                <ComboBoxItem Content="Rocks"/>
+                <ComboBoxItem Content="Landscapes"/>
+                <ComboBoxItem Content="Buildings"/>
+                <ComboBoxItem Content="Motorcycle"/>
+                <ComboBoxItem Content="Cars"/>
+                <ComboBoxItem Content="Random"/>
             </ComboBox>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Rows:" Margin="0,5"/>
-                <TextBox Width="30" Text="{Binding Rows}" IsEnabled="{Binding IsSizeEditable}"/>
-                <TextBlock Text="Cols:" Margin="10,5,0,5"/>
-                <TextBox Width="51" Text="{Binding Columns}" IsEnabled="{Binding IsSizeEditable}"/>
+                <TextBlock Text="Rows:" Margin="0,5" Foreground="{DynamicResource TextBlockForeground}"/>
+                <TextBox Width="30" Text="{Binding Rows}" IsEnabled="{Binding IsSizeEditable}"
+                         Background="{DynamicResource TextBoxBackground}" Foreground="{DynamicResource TextBoxForeground}"/>
+                <TextBlock Text="Cols:" Margin="10,5,0,5" Foreground="{DynamicResource TextBlockForeground}"/>
+                <TextBox Width="51" Text="{Binding Columns}" IsEnabled="{Binding IsSizeEditable}"
+                         Background="{DynamicResource TextBoxBackground}" Foreground="{DynamicResource TextBoxForeground}"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Time (sec):" Margin="0,5"/>
-                <TextBox Width="50" Text="{Binding Time}" IsEnabled="{Binding IsTimeEditable}"/>
+                <TextBlock Text="Time (sec):" Margin="0,5" Foreground="{DynamicResource TextBlockForeground}"/>
+                <TextBox Width="50" Text="{Binding Time}" IsEnabled="{Binding IsTimeEditable}"
+                         Background="{DynamicResource TextBoxBackground}" Foreground="{DynamicResource TextBoxForeground}"/>
             </StackPanel>
-
         </StackPanel>
 
         <!-- Butoane de control -->
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
             <Button Content="Back" Width="60" Margin="5"
                     Command="{Binding BackCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
             <Button Content="Play" Width="60" Margin="5"
                     Command="{Binding PlayCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
-            <Button Content="Continue" Width="70" Margin="5"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
+            <Button Content="Continue" Width="80" Margin="5"
                     Command="{Binding ContinueCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
+            
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Clear Saved Game" Width="150" Margin="5"
+                    Command="{Binding ClearSavedGameCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
+        </StackPanel>
+        <!-- Buton pentru a șterge jocul salvat -->
     </Grid>
 </Window>

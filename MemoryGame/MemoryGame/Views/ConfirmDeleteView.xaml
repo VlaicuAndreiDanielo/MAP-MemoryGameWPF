@@ -3,17 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Confirm Delete"
         WindowStartupLocation="CenterScreen"
-        SizeToContent="WidthAndHeight">
+        SizeToContent="WidthAndHeight"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
     <StackPanel Margin="20">
         <TextBlock Text="{Binding Message}"
                    Margin="0,0,0,20"
                    TextWrapping="Wrap"
-                   FontSize="14"/>
+                   FontSize="14"
+                   Foreground="{DynamicResource TextBlockForeground}"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="OK" Margin="5" Width="60"
-                    Command="{Binding OkCommand}" />
+                    Command="{Binding OkCommand}"
+                    Style="{DynamicResource ButtonStyle}"/>
             <Button Content="Cancel" Margin="5" Width="60"
-                    Command="{Binding CancelCommand}" />
+                    Command="{Binding CancelCommand}"
+                    Style="{DynamicResource ButtonStyle}"/>
         </StackPanel>
     </StackPanel>
 </Window>

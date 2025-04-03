@@ -77,7 +77,8 @@ namespace MemoryGame.ViewModels
                     w.Close();
                 }
             }
-            var loginView = new Views.LoginView();
+
+            Window loginView = new Views.LoginView();
             loginView.Show();
         }
 

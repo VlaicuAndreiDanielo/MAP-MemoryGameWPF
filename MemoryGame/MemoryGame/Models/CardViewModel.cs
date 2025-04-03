@@ -8,7 +8,6 @@ namespace MemoryGame.Models
         public string FrontImage { get; }
         public bool IsFlipped { get; set; }
         public bool IsMatched { get; set; }
-
         public int Index { get; set; }
         public int Columns { get; }
         public int Row => Index / Columns;
@@ -47,7 +46,8 @@ namespace MemoryGame.Models
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)
-          => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        public void OnPropertyChanged(string propertyName)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
     }
 }

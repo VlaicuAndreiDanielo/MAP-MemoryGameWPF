@@ -1,0 +1,23 @@
+﻿<Window x:Class="MemoryGame.Views.StatisticsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statistics" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
+    <Grid Margin="10">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <Button Content="Overall" Command="{Binding ShowOverallCommand}" Margin="5"
+                        Style="{DynamicResource ButtonStyle}"/>
+                <Button Content="By Category" Command="{Binding ShowCategoryCommand}" Margin="5"
+                        Style="{DynamicResource ButtonStyle}"/>
+                <Button Content="By Mode" Command="{Binding ShowModeCommand}" Margin="5"
+                        Style="{DynamicResource ButtonStyle}"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding DisplayStats}" AutoGenerateColumns="True" Margin="0,10,0,0"
+                      Background="{DynamicResource TextBoxBackground}"
+                      Foreground="{DynamicResource TextBoxForeground}"/>
+        </StackPanel>
+    </Grid>
+</Window>

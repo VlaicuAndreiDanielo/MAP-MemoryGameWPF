@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Computers\MAP-MemoryGameWPF\MemoryGame\MemoryGame\App.xaml
-8-378930484
+201923680123
 2821817659884
-29-1967914593
+36-69108378
 199-1530353166
-MainWindow.xaml;Views\ConfirmDeleteView.xaml;Views\CreateUserView.xaml;Views\GameOverView.xaml;Views\GameSetupView.xaml;Views\GameView.xaml;Views\LoginView.xaml;Views\PauseWindow.xaml;
+Themes\BabyPinkTheme.xaml;Themes\DeepBlueTheme.xaml;Themes\DeepOrangeTheme.xaml;Themes\ForestGreenTheme.xaml;Themes\HeavenLightTheme.xaml;Themes\IntenseVioletTheme.xaml;Themes\PaleLavenderTheme.xaml;Themes\QuantumRedTheme.xaml;Themes\SunnyYellowTheme.xaml;Themes\TotalDarknessTheme.xaml;Views\ConfirmDeleteView.xaml;Views\CreateUserView.xaml;Views\GameOverView.xaml;Views\GameSetupView.xaml;Views\GameView.xaml;Views\LoginView.xaml;Views\PauseWindow.xaml;Views\StatisticsView.xaml;Views\ThemePickerView.xaml;Views\WinView.xaml;
 
-False
+True
 

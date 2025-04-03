@@ -1,5 +1,6 @@
 ﻿using MemoryGame.Commands;
 using MemoryGame.Models;
+using MemoryGame.Services;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
@@ -15,6 +16,9 @@ namespace MemoryGame.ViewModels
         {
             _currentUser = currentUser;
             _currentGame = currentGame;
+
+            StatsManager.UpdateStats(_currentUser, _currentGame, win: false);
+
             RetryCommand = new RelayCommand(Retry);
             RestartCommand = new RelayCommand(Restart);
             QuitCommand = new RelayCommand(Quit);

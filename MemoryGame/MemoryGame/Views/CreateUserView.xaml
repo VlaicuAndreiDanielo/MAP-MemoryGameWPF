@@ -5,7 +5,9 @@
         xmlns:vm="clr-namespace:MemoryGame.ViewModels"
         Title="Create New User"
         Height="450" Width="300"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource WindowBackground}"
+        Foreground="{DynamicResource WindowForeground}">
     <!-- Setăm DataContext la un nou CreateUserViewModel -->
     <Window.DataContext>
         <vm:CreateUserViewModel/>
@@ -25,40 +27,44 @@
 
         <!-- Rândul 0: Introducere nume -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
-            <Label Content="User Name:" VerticalAlignment="Center"/>
+            <Label Content="User Name:" VerticalAlignment="Center"
+                   Foreground="{DynamicResource TextBlockForeground}"/>
             <TextBox Width="176" Margin="5,0"
-               Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"/>
+                     Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
+                     Background="{DynamicResource TextBoxBackground}"
+                     Foreground="{DynamicResource TextBoxForeground}"/>
         </StackPanel>
 
         <!-- Rândul 1: Selecția avatarului și navigare -->
         <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- TextBlock de debug cu fallback -->
             <TextBlock Text="{Binding SelectedAvatarPath, FallbackValue='SelectedAvatarPath not set'}"
-                 Foreground="Red" FontWeight="Bold" Margin="0,0,0,5"/>
-
+                       Foreground="Red" FontWeight="Bold" Margin="0,0,0,5"/>
             <Border BorderBrush="Black" BorderThickness="2" Height="222" Width="230">
                 <Canvas Width="230" Height="222">
                     <Canvas.Background>
                         <ImageBrush ImageSource="{Binding SelectedAvatarPath, Converter={StaticResource StringToImageSourceConverter}}"
-                        Stretch="UniformToFill"/>
+                                    Stretch="UniformToFill"/>
                     </Canvas.Background>
                 </Canvas>
             </Border>
-
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                <Button Content="&lt;&lt;" Command="{Binding PrevImageCommand}" Width="40" Margin="5,0"/>
-                <Button Content="&gt;&gt;" Command="{Binding NextImageCommand}" Width="40" Margin="5,0"/>
+                <Button Content="&lt;&lt;" Command="{Binding PrevImageCommand}" Width="40" Margin="5,0"
+                        Style="{DynamicResource ButtonStyle}"/>
+                <Button Content="&gt;&gt;" Command="{Binding NextImageCommand}" Width="40" Margin="5,0"
+                        Style="{DynamicResource ButtonStyle}"/>
             </StackPanel>
         </StackPanel>
 
         <!-- Rândul 2: Butoanele Create și Cancel -->
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,10" Width="260">
             <Button Content="Create" Width="119" Margin="5"
-              Command="{Binding CreateCommand}"
-              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    Command="{Binding CreateCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
             <Button Content="Cancel" Width="122" Margin="5"
-              Command="{Binding CancelCommand}"
-              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+                    Command="{Binding CancelCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                    Style="{DynamicResource ButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
