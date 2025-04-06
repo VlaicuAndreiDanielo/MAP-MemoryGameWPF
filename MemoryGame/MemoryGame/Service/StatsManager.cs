@@ -10,7 +10,6 @@ namespace MemoryGame.Services
     {
         private static string StatsFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "stats.json");
 
-        // Actualizează statisticile pentru un joc (win sau loss)
         public static void UpdateStats(User user, Game game, bool win)
         {
             var stats = LoadStats();
@@ -26,7 +25,6 @@ namespace MemoryGame.Services
             if (win)
             {
                 userStats.Wins++;
-                // Actualizează câștigurile pentru dificultate și categorie
                 if (!userStats.Difficulties.ContainsKey(game.Level))
                     userStats.Difficulties[game.Level] = new OutcomeStats();
                 userStats.Difficulties[game.Level].Wins++;
@@ -38,7 +36,6 @@ namespace MemoryGame.Services
             else
             {
                 userStats.Losses++;
-                // Actualizează pierderile pentru dificultate și categorie
                 if (!userStats.Difficulties.ContainsKey(game.Level))
                     userStats.Difficulties[game.Level] = new OutcomeStats();
                 userStats.Difficulties[game.Level].Losses++;

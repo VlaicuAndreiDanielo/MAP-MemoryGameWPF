@@ -16,7 +16,6 @@ namespace MemoryGame.Converters
                 {
                     var image = new BitmapImage();
                     image.BeginInit();
-                    // Se specifică UriKind.RelativeOrAbsolute pentru a suporta căi relative
                     image.UriSource = new Uri(path, UriKind.RelativeOrAbsolute);
                     image.CacheOption = BitmapCacheOption.OnLoad;
                     image.EndInit();
@@ -24,7 +23,6 @@ namespace MemoryGame.Converters
                 }
                 catch (Exception ex)
                 {
-                    // Poți loga excepția dacă este necesar
                     return null;
                 }
             }

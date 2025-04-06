@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-// LoginView.xaml.cs
 namespace MemoryGame.Views
 {
     public partial class LoginView : Window

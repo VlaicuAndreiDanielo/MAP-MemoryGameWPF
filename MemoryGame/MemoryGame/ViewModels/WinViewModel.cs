@@ -1,5 +1,6 @@
 ﻿using MemoryGame.Commands;
 using MemoryGame.Models;
+using MemoryGame.Service;
 using MemoryGame.Services;
 using System.ComponentModel;
 using System.Windows;
@@ -16,10 +17,12 @@ namespace MemoryGame.ViewModels
         {
             _currentUser = user;
             _currentGame = game;
-
-            // Actualizează statistica de câștig pentru dificultate și categorie
             StatsManager.UpdateStats(_currentUser, _currentGame, win: true);
-
+            if (_currentGame.IsSaved)
+            {
+                GameManager.ClearSavedGame(_currentUser);
+                // ClearSavedGame(); - Old function call, but still functional
+            }
             ReplayCommand = new RelayCommand(Replay);
             HomeCommand = new RelayCommand(Home);
             QuitCommand = new RelayCommand(Quit);
@@ -31,9 +34,11 @@ namespace MemoryGame.ViewModels
 
         private void Replay(object parameter)
         {
-            // Pornește un nou joc cu aceleași setări, dar o configurație diferită
+            if (_currentGame.IsSaved)
+                ClearSavedGame();
             var gameView = new Views.GameView();
-            var gameVM = new GameViewModel(_currentUser, _currentGame); // folosim același Game ca șablon
+            _currentGame.Cards = null; _currentGame.TimeRemaining = Settings.Default.LastTime;
+            var gameVM = new GameViewModel(_currentUser, _currentGame);
             gameView.DataContext = gameVM;
             gameView.Show();
 
@@ -43,7 +48,8 @@ namespace MemoryGame.ViewModels
 
         private void Home(object parameter)
         {
-            // Deschide fereastra de Game Setup pentru reconfigurare
+            if (_currentGame.IsSaved)
+                ClearSavedGame();
             var setupView = new Views.GameSetupView();
             var setupVM = new GameSetupViewModel(_currentUser);
             setupView.DataContext = setupVM;
@@ -55,12 +61,29 @@ namespace MemoryGame.ViewModels
 
         private void Quit(object parameter)
         {
-            // Revine la fereastra de Login
+            if (_currentGame.IsSaved)
+                ClearSavedGame();
             var loginView = new Views.LoginView();
             loginView.Show();
 
             if (parameter is Window window)
                 window.Close();
+        }
+
+        private void ClearSavedGame()
+        {
+            _currentUser.SavedGame = null;
+            var users = UserManager.LoadUsers();
+            foreach (var user in users)
+            {
+                if (user.Name.Equals(_currentUser.Name, StringComparison.OrdinalIgnoreCase))
+                {
+                    user.SavedGame = null;
+                    break;
+                }
+            }
+            UserManager.SaveUsers(users);
+            CommandManager.InvalidateRequerySuggested();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

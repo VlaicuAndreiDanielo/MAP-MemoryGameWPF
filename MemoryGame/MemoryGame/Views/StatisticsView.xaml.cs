@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace MemoryGame.Views
 {
-    /// <summary>
-    /// Interaction logic for StatisticsView.xaml
-    /// </summary>
+
     public partial class StatisticsView : Window
     {
         public StatisticsView()

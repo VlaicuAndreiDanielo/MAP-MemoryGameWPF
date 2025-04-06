@@ -1,11 +1,219 @@
 [
   {
     "UserName": "andrei",
+    "TotalGames": 9,
+    "Wins": 6,
+    "Losses": 3,
+    "Difficulties": {
+      "Easy Mode": {
+        "Wins": 6,
+        "Losses": 2
+      },
+      "Hard Mode": {
+        "Wins": 0,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 2,
+        "Losses": 0
+      },
+      "Trees": {
+        "Wins": 4,
+        "Losses": 3
+      }
+    }
+  },
+  {
+    "UserName": "test",
+    "TotalGames": 55,
+    "Wins": 38,
+    "Losses": 17,
+    "Difficulties": {
+      "Custom Mode": {
+        "Wins": 37,
+        "Losses": 16
+      },
+      "Easy Mode": {
+        "Wins": 1,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Trees": {
+        "Wins": 27,
+        "Losses": 5
+      },
+      "Flowers": {
+        "Wins": 10,
+        "Losses": 12
+      },
+      "Fruits": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "al3ss",
+    "TotalGames": 1,
+    "Wins": 0,
+    "Losses": 1,
+    "Difficulties": {
+      "Challenging Mode": {
+        "Wins": 0,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Animals": {
+        "Wins": 0,
+        "Losses": 1
+      }
+    }
+  },
+  {
+    "UserName": "ela",
+    "TotalGames": 3,
+    "Wins": 2,
+    "Losses": 1,
+    "Difficulties": {
+      "Baby Mode": {
+        "Wins": 2,
+        "Losses": 0
+      },
+      "Custom Mode": {
+        "Wins": 0,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Animals": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Trees": {
+        "Wins": 0,
+        "Losses": 1
+      }
+    }
+  },
+  {
+    "UserName": "newUser",
+    "TotalGames": 19,
+    "Wins": 8,
+    "Losses": 11,
+    "Difficulties": {
+      "Custom Mode": {
+        "Wins": 8,
+        "Losses": 11
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 4,
+        "Losses": 7
+      },
+      "Trees": {
+        "Wins": 4,
+        "Losses": 4
+      }
+    }
+  },
+  {
+    "UserName": "Maria Eva",
+    "TotalGames": 7,
+    "Wins": 4,
+    "Losses": 3,
+    "Difficulties": {
+      "Easy Mode": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Intermediate Mode": {
+        "Wins": 1,
+        "Losses": 2
+      },
+      "Custom Mode": {
+        "Wins": 2,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Vegetables": {
+        "Wins": 1,
+        "Losses": 2
+      },
+      "Animals": {
+        "Wins": 1,
+        "Losses": 1
+      },
+      "Trees": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "Obito",
     "TotalGames": 1,
     "Wins": 1,
     "Losses": 0,
     "Difficulties": {
-      "Easy Mode": {
+      "Intermediate Mode": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    },
+    "Categories": {
+      "Trees": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "mama",
+    "TotalGames": 6,
+    "Wins": 4,
+    "Losses": 2,
+    "Difficulties": {
+      "Medium Mode": {
+        "Wins": 0,
+        "Losses": 1
+      },
+      "Custom Mode": {
+        "Wins": 4,
+        "Losses": 1
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 3,
+        "Losses": 2
+      },
+      "Trees": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "costel",
+    "TotalGames": 1,
+    "Wins": 1,
+    "Losses": 0,
+    "Difficulties": {
+      "Custom Mode": {
         "Wins": 1,
         "Losses": 0
       }
@@ -13,6 +221,46 @@
     "Categories": {
       "Flowers": {
         "Wins": 1,
+        "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "alex",
+    "TotalGames": 15,
+    "Wins": 12,
+    "Losses": 3,
+    "Difficulties": {
+      "Custom Mode": {
+        "Wins": 12,
+        "Losses": 3
+      }
+    },
+    "Categories": {
+      "Trees": {
+        "Wins": 12,
+        "Losses": 3
+      }
+    }
+  },
+  {
+    "UserName": "Mirela",
+    "TotalGames": 2,
+    "Wins": 2,
+    "Losses": 0,
+    "Difficulties": {
+      "Easy Mode": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Medium Mode": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    },
+    "Categories": {
+      "Flowers": {
+        "Wins": 2,
         "Losses": 0
       }
     }

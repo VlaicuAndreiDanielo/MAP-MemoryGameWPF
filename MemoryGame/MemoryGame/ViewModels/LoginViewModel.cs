@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using Newtonsoft.Json;
-using System.IO;  // Added for File operations
+using System.IO; 
 using System.Windows;
 using MemoryGame.Views;
 using MemoryGame.Services;
@@ -32,8 +32,8 @@ namespace MemoryGame.ViewModels
         public ICommand CreateUserCommand { get; }
         public ICommand DeleteUserCommand { get; }
         public ICommand PlayCommand { get; }
-        public ICommand CancelCommand { get; }  // Added initialization in constructor
-                                                // Noile comenzi
+        public ICommand CancelCommand { get; }  
+
         public ICommand HelpCommand { get; }
         public ICommand StatisticsCommand { get; }
         public ICommand ThemeCommand { get; }
@@ -47,7 +47,7 @@ namespace MemoryGame.ViewModels
 
             HelpCommand = new RelayCommand(ShowHelp);
             StatisticsCommand = new RelayCommand(OpenStatistics);
-            CancelCommand = new RelayCommand(CloseWindow);  // Initialize CancelCommand
+            CancelCommand = new RelayCommand(CloseWindow); 
             ThemeCommand = new RelayCommand(SwitchTheme);
         }
 
@@ -58,24 +58,18 @@ namespace MemoryGame.ViewModels
 
         private void CreateUser(object parameter)
         {
-            // Deschide fereastra de creare a user-ului
             var createUserView = new CreateUserView();
             bool? result = createUserView.ShowDialog();
             if (result == true)
             {
-                // Preia ViewModel-ul din fereastră
                 var vm = createUserView.DataContext as CreateUserViewModel;
                 if (vm != null && vm.NewUser != null)
                 {
-                    // Încarcă lista de useri din JSON
                     var users = UserManager.LoadUsers();
-                    // Adaugă noul user
                     users.Add(vm.NewUser);
-                    // Salvează modificările
                     UserManager.SaveUsers(users);
                     MessageBox.Show("User created successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    // Dacă parametru este LoginViewModel, actualizează colecția de useri din UI
                     if (parameter is LoginViewModel loginVM)
                     {
                         var updatedUsers = UserManager.LoadUsers();
@@ -97,7 +91,6 @@ namespace MemoryGame.ViewModels
         {
             if (SelectedUser != null)
             {
-                // Deschide fereastra de confirmare cu numele userului
                 var confirmWindow = new ConfirmDeleteView(SelectedUser.Name);
                 bool? result = confirmWindow.ShowDialog();
 
@@ -111,7 +104,7 @@ namespace MemoryGame.ViewModels
                     }
 
                     bool found = false;
-                    // Parcurgem lista și ștergem userul care corespunde după nume
+
                     for (int i = 0; i < users.Count; i++)
                     {
                         if (users[i].Name == SelectedUser.Name)
@@ -124,9 +117,8 @@ namespace MemoryGame.ViewModels
 
                     if (found)
                     {
-                        // Salvează lista actualizată în JSON
+
                         UserManager.SaveUsers(users);
-                        // Actualizează colecția locală pentru ca UI-ul să se reîmprospăteze
                         Users.Clear();
                         foreach (var user in users)
                         {
@@ -163,7 +155,7 @@ namespace MemoryGame.ViewModels
                 Users = new ObservableCollection<User>();
             }
         }
-        // Noua comandă Help – afișează un mesaj cu numele și grupa ta
+
         private void ShowHelp(object parameter)
         {
             MessageBox.Show("Your Name: Vlaicu Andrei Danielo\n" +
@@ -176,7 +168,7 @@ namespace MemoryGame.ViewModels
             pickerView.DataContext = new ThemePickerViewModel();
             pickerView.ShowDialog();
         }
-        // Comandă pentru deschiderea ferestrei de Statistics
+
         private void OpenStatistics(object parameter)
         {
             var statsView = new StatisticsView();
@@ -217,6 +209,7 @@ namespace MemoryGame.ViewModels
             {
                 MessageBox.Show("Please select a user to play.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+           
         }
 
         private void CloseWindow(object parameter)

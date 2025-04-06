@@ -52,7 +52,7 @@ namespace MemoryGame.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MemoryGame;V1.0.0.0;component/views/gameoverview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MemoryGame;component/views/gameoverview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\GameOverView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

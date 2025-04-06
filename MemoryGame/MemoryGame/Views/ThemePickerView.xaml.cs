@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace MemoryGame.Views
 {
-    /// <summary>
-    /// Interaction logic for ThemePickerView.xaml
-    /// </summary>
+
     public partial class ThemePickerView : Window
     {
         public ThemePickerView()

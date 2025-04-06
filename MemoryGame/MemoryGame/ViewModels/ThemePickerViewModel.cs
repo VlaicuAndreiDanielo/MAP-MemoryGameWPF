@@ -17,7 +17,7 @@ namespace MemoryGame.ViewModels
         public ThemePickerViewModel()
         {
             AvailableThemes = new ObservableCollection<string>(ThemeManager.AvailableThemes);
-            SelectedTheme = Settings.Default.SelectedTheme; // or read from user settings
+            SelectedTheme = Settings.Default.SelectedTheme;
             ApplyThemeCommand = new RelayCommand(ApplyTheme);
         }
 
@@ -29,7 +29,6 @@ namespace MemoryGame.ViewModels
                 Settings.Default.SelectedTheme = SelectedTheme;
                 Settings.Default.Save();    
             }
-            // Close the window if you want:
             if (parameter is Window w) w.Close();
         }
     }

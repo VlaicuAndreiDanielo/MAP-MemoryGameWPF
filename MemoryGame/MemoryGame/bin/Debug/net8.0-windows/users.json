@@ -28,5 +28,50 @@
     "Name": "Edu",
     "ImagePath": "Images/avatar1.png",
     "SavedGame": null
+  },
+  {
+    "Name": "test",
+    "ImagePath": "Images/AvatarSpecial2.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "al3ss",
+    "ImagePath": "Images/avatar16.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "ela",
+    "ImagePath": "Images/avatar12.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "Maty",
+    "ImagePath": "Images/avatar3.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "newUser",
+    "ImagePath": "Images/avatar2.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "Maria Eva",
+    "ImagePath": "Images/AvatarSpecial.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "Obito",
+    "ImagePath": "Images/AvatarSpecial2.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "mama",
+    "ImagePath": "Images/avatar12.png",
+    "SavedGame": null
+  },
+  {
+    "Name": "Mirela",
+    "ImagePath": "Images/avatar17.png",
+    "SavedGame": null
   }
 ]

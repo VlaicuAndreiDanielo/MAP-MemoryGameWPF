@@ -15,7 +15,6 @@ namespace MemoryGame.ViewModels
 
         public CreateUserViewModel()
         {
-            // Inițializează lista de avataruri (modifică căile după necesitate)
             _availableAvatars = new ObservableCollection<string>
             {
                 "Images/avatar1.png","Images/avatar2.png","Images/avatar3.png","Images/avatar4.png","Images/avatar5.png","Images/avatar6.png",
@@ -39,7 +38,6 @@ namespace MemoryGame.ViewModels
             set { _userName = value; OnPropertyChanged(nameof(UserName)); }
         }
 
-        // Returnează calea imaginii avatar curente
         public string SelectedAvatarPath
         {
             get
@@ -54,8 +52,6 @@ namespace MemoryGame.ViewModels
         public ICommand CancelCommand { get; }
         public ICommand PrevImageCommand { get; }
         public ICommand NextImageCommand { get; }
-
-        // Va stoca noul utilizator creat după confirmare
         public User NewUser { get; private set; }
 
         private void CreateUser(object parameter)
@@ -66,7 +62,6 @@ namespace MemoryGame.ViewModels
                 return;
             }
 
-            // Creează utilizatorul cu avatarul selectat
             NewUser = new User
             {
                 Name = UserName,

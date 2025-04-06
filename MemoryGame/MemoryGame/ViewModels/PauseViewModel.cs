@@ -16,6 +16,7 @@ namespace MemoryGame.ViewModels
         {
             _currentUser = user;
             _gameVM = gameVM;
+
             ContinueCommand = new RelayCommand(ContinueGame);
             SaveCommand = new RelayCommand(SaveGame);
             QuitCommand = new RelayCommand(QuitGame);
@@ -25,20 +26,25 @@ namespace MemoryGame.ViewModels
         public ICommand SaveCommand { get; }
         public ICommand QuitCommand { get; }
 
-        private void ContinueGame(object parameter)
+        public bool ResumeOnClose { get; set; } = true;
+
+        public void ContinueGame(object parameter)
         {
+            ResumeOnClose = true;
             if (parameter is Window window)
             {
                 window.Close();
             }
             _gameVM.ResumeTimer();
+            _gameVM.IsForcedQuit = true;
         }
 
         private void SaveGame(object parameter)
         {
-            // Actualizează starea jocului curent
+            ResumeOnClose = false;
             Game currentGameState = _gameVM.GetCurrentGameState();
             _currentUser.SavedGame = currentGameState;
+            _currentUser.SavedGame.IsSaved = true;
             var users = UserManager.LoadUsers();
             for (int i = 0; i < users.Count; i++)
             {
@@ -49,13 +55,14 @@ namespace MemoryGame.ViewModels
                 }
             }
             UserManager.SaveUsers(users);
+            var loginView = new Views.LoginView();
+            loginView.Show();
 
             if (parameter is Window window)
             {
                 window.Close();
             }
-            _gameVM.ResumeTimer();
-
+            _gameVM.PauseTimer(); 
             foreach (Window w in Application.Current.Windows)
             {
                 if (w is Views.GameView || w is Views.PauseWindow)
@@ -63,13 +70,16 @@ namespace MemoryGame.ViewModels
                     w.Close();
                 }
             }
-            var loginView = new Views.LoginView();
-            loginView.Show();
         }
 
         private void QuitGame(object parameter)
         {
-            // Închide fereastra de pauză și jocul, apoi revine la Login
+            ResumeOnClose = false;
+            _gameVM.PauseTimer();
+
+            var loginView = new Views.LoginView();
+            loginView.Show();
+
             foreach (Window w in Application.Current.Windows)
             {
                 if (w is Views.GameView || w is Views.PauseWindow)
@@ -77,10 +87,9 @@ namespace MemoryGame.ViewModels
                     w.Close();
                 }
             }
-
-            Window loginView = new Views.LoginView();
-            loginView.Show();
         }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)

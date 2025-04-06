@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace MemoryGame.Views
 {
-    /// <summary>
-    /// Interaction logic for GameSetupView.xaml
-    /// </summary>
     public partial class GameSetupView : Window
     {
         public GameSetupView()

@@ -20,7 +20,6 @@ namespace MemoryGame.Services
                     var list = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
                     if (list == null)
                     {
-                        // Log or show an error
                         MessageBox.Show("Deserialization returned null. Check JSON format.");
                         return new ObservableCollection<User>();
                     }

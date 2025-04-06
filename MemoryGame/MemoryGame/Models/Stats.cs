@@ -13,7 +13,6 @@
         public int HardGamesPlayed { get; set; }
         public int CustomGamesPlayed { get; set; }
 
-        // Număr de jocuri pe fiecare modul
         public Dictionary<string, int> GamesPerModule { get; set; } = new Dictionary<string, int>();
     }
 }

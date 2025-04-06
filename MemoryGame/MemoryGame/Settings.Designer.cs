@@ -58,5 +58,41 @@ namespace MemoryGame {
                 this["LastCategory"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LastRows {
+            get {
+                return ((int)(this["LastRows"]));
+            }
+            set {
+                this["LastRows"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LastColumns {
+            get {
+                return ((int)(this["LastColumns"]));
+            }
+            set {
+                this["LastColumns"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LastTime {
+            get {
+                return ((int)(this["LastTime"]));
+            }
+            set {
+                this["LastTime"] = value;
+            }
+        }
     }
 }

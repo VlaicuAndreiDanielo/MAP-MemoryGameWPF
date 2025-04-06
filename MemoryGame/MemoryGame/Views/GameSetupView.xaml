@@ -13,7 +13,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Secțiunea de configurare -->
         <StackPanel Orientation="Vertical" Grid.Row="0">
             <TextBlock Text="Select Level:" 
                        Foreground="{DynamicResource TextBlockForeground}" />

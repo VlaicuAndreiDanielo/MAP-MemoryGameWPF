@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace MemoryGame.Views
 {
-    /// <summary>
-    /// Interaction logic for GameOverView.xaml
-    /// </summary>
+
     public partial class GameOverView : Window
     {
         public GameOverView()

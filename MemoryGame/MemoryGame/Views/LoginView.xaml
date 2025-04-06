@@ -17,12 +17,9 @@
         <conv:StringToImageSourceConverter x:Key="StringToImageSourceConverter"/>
     </Window.Resources>
 
-    <!-- Optional: Top area for extra buttons (Help, Statistics, Theme) -->
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <!-- Extra row for top buttons -->
             <RowDefinition Height="Auto"/>
-            <!-- Existing content rows -->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -32,7 +29,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Top Buttons: Help, Statistics, Theme -->
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     Margin="0,0,0,5"
@@ -49,7 +45,6 @@
                     Style="{DynamicResource ButtonStyle}" />
         </StackPanel>
 
-        <!-- Title / Welcome Text -->
         <TextBlock Text="Wellcome Enjoy this game!" 
                    FontSize="16" 
                    FontWeight="Bold"
@@ -58,7 +53,6 @@
                    Margin="0,0,0,10"
                    Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <!-- Main Content: ListBox & Avatar -->
         <ListBox x:Name="UserList"
                  ItemsSource="{Binding Users}"
                  SelectedItem="{Binding SelectedUser}"
@@ -79,7 +73,6 @@
             </Canvas>
         </StackPanel>
 
-        <!-- Bottom Buttons -->
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"

@@ -4,16 +4,15 @@ namespace MemoryGame.Models
 {
     public class Game
     {
-        public string Level { get; set; }  // "easy", "medium", "hard", "custom"
-        public string Module { get; set; } // "flori", "animale", "memes", etc.
+        public string Level { get; set; }  
+        public string Module { get; set; }
         public int TimeRemaining { get; set; }
-
-        // Dacă jocul are un layout M x N
         public int Rows { get; set; }
         public int Columns { get; set; }
-
-        // Lista cărților (poziție, path imagine, stare flipped etc.)
         public List<CardState> Cards { get; set; } = new List<CardState>();
+
+        public bool IsSaved { get; set; } 
+
     }
 
     public class CardState

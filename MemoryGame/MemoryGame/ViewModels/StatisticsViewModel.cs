@@ -25,7 +25,6 @@ namespace MemoryGame.ViewModels
 
         public StatisticsViewModel()
         {
-            // Încărcăm statisticile din fișierul JSON
             _allStats = new ObservableCollection<UserStats>(StatsManager.LoadStats());
             ShowOverallCommand = new RelayCommand(o => ShowOverall());
             ShowCategoryCommand = new RelayCommand(o => ShowCategory());
@@ -35,7 +34,6 @@ namespace MemoryGame.ViewModels
 
         private void ShowOverall()
         {
-            // Afișează statisticile generale pentru fiecare utilizator
             DisplayStats = new ObservableCollection<object>(_allStats.Select(s => new {
                 s.UserName,
                 s.TotalGames,
@@ -46,7 +44,6 @@ namespace MemoryGame.ViewModels
 
         private void ShowCategory()
         {
-            // Afișează statisticile pe categorii pentru fiecare utilizator
             var list = new List<object>();
             foreach (var s in _allStats)
             {
@@ -60,7 +57,6 @@ namespace MemoryGame.ViewModels
 
         private void ShowMode()
         {
-            // Afișează statisticile pe moduri (dificultăți) pentru fiecare utilizator
             var list = new List<object>();
             foreach (var s in _allStats)
             {

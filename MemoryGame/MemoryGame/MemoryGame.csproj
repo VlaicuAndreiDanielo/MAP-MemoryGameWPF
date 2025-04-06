@@ -164,6 +164,203 @@
     <None Remove="ImagesFlowers\flower71.png" />
     <None Remove="ImagesFlowers\flower8.png" />
     <None Remove="ImagesFlowers\flower9.png" />
+    <None Remove="ImagesFruits\fruit1.jpg" />
+    <None Remove="ImagesFruits\fruit10.jpg" />
+    <None Remove="ImagesFruits\fruit11.jpg" />
+    <None Remove="ImagesFruits\fruit12.jpg" />
+    <None Remove="ImagesFruits\fruit13.jpg" />
+    <None Remove="ImagesFruits\fruit14.jpg" />
+    <None Remove="ImagesFruits\fruit15.jpg" />
+    <None Remove="ImagesFruits\fruit16.jpg" />
+    <None Remove="ImagesFruits\fruit17.jpg" />
+    <None Remove="ImagesFruits\fruit18.jpg" />
+    <None Remove="ImagesFruits\fruit19.jpg" />
+    <None Remove="ImagesFruits\fruit2.jpg" />
+    <None Remove="ImagesFruits\fruit20.jpg" />
+    <None Remove="ImagesFruits\fruit21.jpg" />
+    <None Remove="ImagesFruits\fruit22.jpg" />
+    <None Remove="ImagesFruits\fruit23.jpg" />
+    <None Remove="ImagesFruits\fruit24.jpg" />
+    <None Remove="ImagesFruits\fruit25.jpg" />
+    <None Remove="ImagesFruits\fruit26.jpg" />
+    <None Remove="ImagesFruits\fruit27.jpg" />
+    <None Remove="ImagesFruits\fruit28.jpg" />
+    <None Remove="ImagesFruits\fruit29.jpg" />
+    <None Remove="ImagesFruits\fruit3.jpg" />
+    <None Remove="ImagesFruits\fruit30.jpg" />
+    <None Remove="ImagesFruits\fruit31.jpg" />
+    <None Remove="ImagesFruits\fruit32.jpg" />
+    <None Remove="ImagesFruits\fruit33.jpg" />
+    <None Remove="ImagesFruits\fruit34.jpg" />
+    <None Remove="ImagesFruits\fruit35.jpg" />
+    <None Remove="ImagesFruits\fruit36.jpg" />
+    <None Remove="ImagesFruits\fruit37.jpg" />
+    <None Remove="ImagesFruits\fruit38.jpg" />
+    <None Remove="ImagesFruits\fruit39.jpg" />
+    <None Remove="ImagesFruits\fruit4.jpg" />
+    <None Remove="ImagesFruits\fruit40.jpg" />
+    <None Remove="ImagesFruits\fruit41.jpg" />
+    <None Remove="ImagesFruits\fruit42.jpg" />
+    <None Remove="ImagesFruits\fruit43.jpg" />
+    <None Remove="ImagesFruits\fruit44.jpg" />
+    <None Remove="ImagesFruits\fruit45.jpg" />
+    <None Remove="ImagesFruits\fruit46.jpg" />
+    <None Remove="ImagesFruits\fruit47.jpg" />
+    <None Remove="ImagesFruits\fruit48.jpg" />
+    <None Remove="ImagesFruits\fruit49.jpg" />
+    <None Remove="ImagesFruits\fruit5.jpg" />
+    <None Remove="ImagesFruits\fruit50.jpg" />
+    <None Remove="ImagesFruits\fruit51.jpg" />
+    <None Remove="ImagesFruits\fruit52.jpg" />
+    <None Remove="ImagesFruits\fruit53.jpg" />
+    <None Remove="ImagesFruits\fruit54.jpg" />
+    <None Remove="ImagesFruits\fruit55.jpg" />
+    <None Remove="ImagesFruits\fruit56.jpg" />
+    <None Remove="ImagesFruits\fruit57.jpg" />
+    <None Remove="ImagesFruits\fruit58.jpg" />
+    <None Remove="ImagesFruits\fruit59.jpg" />
+    <None Remove="ImagesFruits\fruit6.jpg" />
+    <None Remove="ImagesFruits\fruit60.jpg" />
+    <None Remove="ImagesFruits\fruit61.jpg" />
+    <None Remove="ImagesFruits\fruit62.jpg" />
+    <None Remove="ImagesFruits\fruit63.jpg" />
+    <None Remove="ImagesFruits\fruit64.jpg" />
+    <None Remove="ImagesFruits\fruit65.jpg" />
+    <None Remove="ImagesFruits\fruit66.jpg" />
+    <None Remove="ImagesFruits\fruit67.jpg" />
+    <None Remove="ImagesFruits\fruit68.jpg" />
+    <None Remove="ImagesFruits\fruit69.jpg" />
+    <None Remove="ImagesFruits\fruit7.jpg" />
+    <None Remove="ImagesFruits\fruit70.jpg" />
+    <None Remove="ImagesFruits\fruit71.jpg" />
+    <None Remove="ImagesFruits\fruit72.jpg" />
+    <None Remove="ImagesFruits\fruit73.jpg" />
+    <None Remove="ImagesFruits\fruit74.jpg" />
+    <None Remove="ImagesFruits\fruit75.jpg" />
+    <None Remove="ImagesFruits\fruit76.jpg" />
+    <None Remove="ImagesFruits\fruit77.jpg" />
+    <None Remove="ImagesFruits\fruit78.jpg" />
+    <None Remove="ImagesFruits\fruit79.jpg" />
+    <None Remove="ImagesFruits\fruit8.jpg" />
+    <None Remove="ImagesFruits\fruit80.jpg" />
+    <None Remove="ImagesFruits\fruit81.jpg" />
+    <None Remove="ImagesFruits\fruit82.jpg" />
+    <None Remove="ImagesFruits\fruit83.jpg" />
+    <None Remove="ImagesFruits\fruit84.jpg" />
+    <None Remove="ImagesFruits\fruit85.jpg" />
+    <None Remove="ImagesFruits\fruit86.jpg" />
+    <None Remove="ImagesFruits\fruit87.jpg" />
+    <None Remove="ImagesFruits\fruit88.jpg" />
+    <None Remove="ImagesFruits\fruit89.jpg" />
+    <None Remove="ImagesFruits\fruit9.jpg" />
+    <None Remove="ImagesFruits\fruit90.jpg" />
+    <None Remove="ImagesFruits\fruit91.jpg" />
+    <None Remove="ImagesFruits\fruit92.jpg" />
+    <None Remove="ImagesFruits\fruit93.jpg" />
+    <None Remove="ImagesFruits\fruit94.jpg" />
+    <None Remove="ImagesFruits\fruit95.jpg" />
+    <None Remove="ImagesRocks\rock1.jpg" />
+    <None Remove="ImagesRocks\rock10.jpg" />
+    <None Remove="ImagesRocks\rock100.jpg" />
+    <None Remove="ImagesRocks\rock101.jpg" />
+    <None Remove="ImagesRocks\rock102.jpg" />
+    <None Remove="ImagesRocks\rock11.jpg" />
+    <None Remove="ImagesRocks\rock12.jpg" />
+    <None Remove="ImagesRocks\rock13.jpg" />
+    <None Remove="ImagesRocks\rock14.jpg" />
+    <None Remove="ImagesRocks\rock15.jpg" />
+    <None Remove="ImagesRocks\rock16.jpg" />
+    <None Remove="ImagesRocks\rock17.jpg" />
+    <None Remove="ImagesRocks\rock18.jpg" />
+    <None Remove="ImagesRocks\rock19.jpg" />
+    <None Remove="ImagesRocks\rock2.jpg" />
+    <None Remove="ImagesRocks\rock20.jpg" />
+    <None Remove="ImagesRocks\rock21.jpg" />
+    <None Remove="ImagesRocks\rock22.jpg" />
+    <None Remove="ImagesRocks\rock23.jpg" />
+    <None Remove="ImagesRocks\rock24.jpg" />
+    <None Remove="ImagesRocks\rock25.jpg" />
+    <None Remove="ImagesRocks\rock26.jpg" />
+    <None Remove="ImagesRocks\rock27.jpg" />
+    <None Remove="ImagesRocks\rock28.jpg" />
+    <None Remove="ImagesRocks\rock29.jpg" />
+    <None Remove="ImagesRocks\rock3.jpg" />
+    <None Remove="ImagesRocks\rock30.jpg" />
+    <None Remove="ImagesRocks\rock31.jpg" />
+    <None Remove="ImagesRocks\rock32.jpg" />
+    <None Remove="ImagesRocks\rock33.jpg" />
+    <None Remove="ImagesRocks\rock34.jpg" />
+    <None Remove="ImagesRocks\rock35.jpg" />
+    <None Remove="ImagesRocks\rock36.jpg" />
+    <None Remove="ImagesRocks\rock37.jpg" />
+    <None Remove="ImagesRocks\rock38.jpg" />
+    <None Remove="ImagesRocks\rock39.jpg" />
+    <None Remove="ImagesRocks\rock4.jpg" />
+    <None Remove="ImagesRocks\rock40.jpg" />
+    <None Remove="ImagesRocks\rock41.jpg" />
+    <None Remove="ImagesRocks\rock42.jpg" />
+    <None Remove="ImagesRocks\rock43.jpg" />
+    <None Remove="ImagesRocks\rock44.jpg" />
+    <None Remove="ImagesRocks\rock45.jpg" />
+    <None Remove="ImagesRocks\rock46.jpg" />
+    <None Remove="ImagesRocks\rock47.jpg" />
+    <None Remove="ImagesRocks\rock48.jpg" />
+    <None Remove="ImagesRocks\rock49.jpg" />
+    <None Remove="ImagesRocks\rock5.jpg" />
+    <None Remove="ImagesRocks\rock50.jpg" />
+    <None Remove="ImagesRocks\rock51.jpg" />
+    <None Remove="ImagesRocks\rock52.jpg" />
+    <None Remove="ImagesRocks\rock53.jpg" />
+    <None Remove="ImagesRocks\rock54.jpg" />
+    <None Remove="ImagesRocks\rock55.jpg" />
+    <None Remove="ImagesRocks\rock56.jpg" />
+    <None Remove="ImagesRocks\rock57.jpg" />
+    <None Remove="ImagesRocks\rock58.jpg" />
+    <None Remove="ImagesRocks\rock59.jpg" />
+    <None Remove="ImagesRocks\rock6.jpg" />
+    <None Remove="ImagesRocks\rock60.jpg" />
+    <None Remove="ImagesRocks\rock61.jpg" />
+    <None Remove="ImagesRocks\rock62.jpg" />
+    <None Remove="ImagesRocks\rock63.jpg" />
+    <None Remove="ImagesRocks\rock64.jpg" />
+    <None Remove="ImagesRocks\rock65.jpg" />
+    <None Remove="ImagesRocks\rock66.jpg" />
+    <None Remove="ImagesRocks\rock67.jpg" />
+    <None Remove="ImagesRocks\rock68.jpg" />
+    <None Remove="ImagesRocks\rock69.jpg" />
+    <None Remove="ImagesRocks\rock7.jpg" />
+    <None Remove="ImagesRocks\rock70.jpg" />
+    <None Remove="ImagesRocks\rock71.jpg" />
+    <None Remove="ImagesRocks\rock72.jpg" />
+    <None Remove="ImagesRocks\rock73.jpg" />
+    <None Remove="ImagesRocks\rock74.jpg" />
+    <None Remove="ImagesRocks\rock75.jpg" />
+    <None Remove="ImagesRocks\rock76.jpg" />
+    <None Remove="ImagesRocks\rock77.jpg" />
+    <None Remove="ImagesRocks\rock78.jpg" />
+    <None Remove="ImagesRocks\rock79.jpg" />
+    <None Remove="ImagesRocks\rock8.jpg" />
+    <None Remove="ImagesRocks\rock80.jpg" />
+    <None Remove="ImagesRocks\rock81.jpg" />
+    <None Remove="ImagesRocks\rock82.jpg" />
+    <None Remove="ImagesRocks\rock83.jpg" />
+    <None Remove="ImagesRocks\rock84.jpg" />
+    <None Remove="ImagesRocks\rock85.jpg" />
+    <None Remove="ImagesRocks\rock86.jpg" />
+    <None Remove="ImagesRocks\rock87.jpg" />
+    <None Remove="ImagesRocks\rock88.jpg" />
+    <None Remove="ImagesRocks\rock89.jpg" />
+    <None Remove="ImagesRocks\rock9.jpg" />
+    <None Remove="ImagesRocks\rock90.jpg" />
+    <None Remove="ImagesRocks\rock91.jpg" />
+    <None Remove="ImagesRocks\rock92.jpg" />
+    <None Remove="ImagesRocks\rock93.jpg" />
+    <None Remove="ImagesRocks\rock94.jpg" />
+    <None Remove="ImagesRocks\rock95.jpg" />
+    <None Remove="ImagesRocks\rock96.jpg" />
+    <None Remove="ImagesRocks\rock97.jpg" />
+    <None Remove="ImagesRocks\rock98.jpg" />
+    <None Remove="ImagesRocks\rock99.jpg" />
     <None Remove="ImagesTrees\tree1.jpg" />
     <None Remove="ImagesTrees\tree10.jpg" />
     <None Remove="ImagesTrees\tree11.jpg" />
@@ -302,6 +499,12 @@
     <None Remove="Images\AvatarSpecial.png" />
     <None Remove="Images\AvatarSpecial2.png" />
     <None Remove="Images\AvatarSpecial3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImagesFruits\fruit58.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -737,6 +940,591 @@
     <Content Include="ImagesFlowers\flower9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ImagesFruits\fruit1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit14.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit15.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit18.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit19.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit20.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit23.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit24.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit25.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit26.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit27.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit28.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit30.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit31.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit33.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit34.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit35.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit36.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit37.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit38.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit39.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit40.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit41.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit42.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit43.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit44.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit45.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit46.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit47.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit48.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit49.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit50.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit51.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit53.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit54.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit55.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit56.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit57.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit59.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit60.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit61.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit62.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit63.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit64.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit65.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit66.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit67.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit68.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit69.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit70.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit71.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit72.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit73.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit74.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit75.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit76.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit77.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit78.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit79.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit80.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit81.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit82.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit83.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit84.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit85.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit86.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit87.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit88.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit89.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit90.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit91.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit92.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit93.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit94.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesFruits\fruit95.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock100.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock101.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock102.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock14.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock15.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock18.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock19.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock20.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock23.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock24.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock25.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock26.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock27.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock28.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock30.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock31.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock33.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock34.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock36.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock37.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock38.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock39.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock40.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock41.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock42.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock43.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock44.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock45.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock46.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock47.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock48.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock49.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock50.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock51.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock53.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock54.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock55.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock56.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock57.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock58.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock59.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock60.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock61.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock62.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock63.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock64.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock65.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock66.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock67.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock68.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock69.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock70.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock71.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock72.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock73.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock74.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock75.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock76.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock77.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock78.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock79.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock80.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock81.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock82.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock83.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock84.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock85.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock86.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock87.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock88.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock89.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock90.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock91.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock92.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock93.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock94.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock95.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock96.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock97.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock98.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesRocks\rock99.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ImagesTrees\tree1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1149,6 +1937,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\AvatarSpecial3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ImagesRocks\rock35.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemoryGame.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +15,25 @@ using System.Windows.Shapes;
 
 namespace MemoryGame.Views
 {
-    /// <summary>
-    /// Interaction logic for GameView.xaml
-    /// </summary>
+
     public partial class GameView : Window
     {
         public GameView()
         {
             InitializeComponent();
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+           
+            if (this.DataContext is GameViewModel vm)
+            {
+                if (vm.IsForcedQuit)
+                {
+                    base.OnClosed(e);
+                    var logwind = new LoginView();
+                    logwind.Show();
+                }
+            }
         }
     }
 }

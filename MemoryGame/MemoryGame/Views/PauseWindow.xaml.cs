@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemoryGame.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,19 @@ namespace MemoryGame.Views
         {
             InitializeComponent();
         }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            if (this.DataContext is PauseViewModel vm)
+            {
+                if (vm.ResumeOnClose)
+                {
+                    vm.ContinueGame(null);
+                }
+            }
+        }
+
     }
+
 }
 

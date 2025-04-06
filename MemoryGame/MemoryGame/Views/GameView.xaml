@@ -11,7 +11,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Bara de sus: Timer + buton de pauză -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -26,7 +25,6 @@
                     Style="{DynamicResource ButtonStyle}"/>
         </Grid>
 
-        <!-- Zona de joc: Lista de carduri -->
         <ItemsControl Grid.Row="1" ItemsSource="{Binding Cards}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -46,11 +44,9 @@
                                     <Image x:Name="CardImage" Stretch="Uniform"/>
                                 </Grid>
                                 <ControlTemplate.Triggers>
-                                    <!-- Dacă ShowFront este fals, se afișează spatele cardului -->
                                     <DataTrigger Binding="{Binding ShowFront}" Value="False">
                                         <Setter TargetName="CardImage" Property="Source" Value="../ImagesCards/default_card_front.png"/>
                                     </DataTrigger>
-                                    <!-- Dacă ShowFront este adevărat, se afișează imaginea de față -->
                                     <DataTrigger Binding="{Binding ShowFront}" Value="True">
                                         <Setter TargetName="CardImage" Property="Source" Value="{Binding FrontImage}"/>
                                     </DataTrigger>

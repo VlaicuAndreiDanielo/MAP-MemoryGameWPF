@@ -26,22 +26,20 @@ namespace MemoryGame.ViewModels
             get => _timeRemaining;
             set { _timeRemaining = value; OnPropertyChanged(nameof(TimeRemaining)); }
         }
+        public bool IsForcedQuit { get; set; } = true;
 
-        // Constructor pentru continuarea unui joc salvat
         private DispatcherTimer _timer;
         public ICommand CardFlipCommand { get; }
-        public ICommand PauseCommand { get; set; }  // Poți defini logica de pauză
+        public ICommand PauseCommand { get; set; }  
 
-        // Variabilă pentru a reține primul card flip-uit
         private CardViewModel _firstFlippedCard = null;
         private bool _isChecking = false;
-        // Constructor pentru joc nou cu lista de imagini
         public GameViewModel(User user, int rows, int columns, ObservableCollection<string> availableImages)
         {
             CurrentUser = user;
             Rows = rows;
             Columns = columns;
-            TimeRemaining = 60; // sau valoarea preluată din setup
+            TimeRemaining = 60;
             Cards = new ObservableCollection<CardViewModel>();
             GenerateCards(availableImages);
             CardFlipCommand = new RelayCommand(async (param) => await OnCardFlipped(param));
@@ -49,35 +47,32 @@ namespace MemoryGame.ViewModels
             StartTimer();
         }
 
-        // Constructor pentru continuarea unui joc salvat sau un joc nou
-        // Constructor pentru continuarea unui joc salvat sau un joc nou
         public GameViewModel(User user, Game game)
         {
             CurrentUser = user;
             CurrentGame = game;
             Rows = game.Rows;
             Columns = game.Columns;
-            TimeRemaining = game.TimeRemaining; // preia timpul din setup
-
+            TimeRemaining = game.TimeRemaining;
             if (game.Cards == null || game.Cards.Count == 0)
             {
+                //CurrentGame.IsSaved = false; - Not Saved game
                 Cards = new ObservableCollection<CardViewModel>();
                 var defaultImages = GetImages(game.Module);
                 GenerateCards(defaultImages);
             }
             else
             {
+                //CurrentGame.IsSaved = true; - Saved game
                 Cards = new ObservableCollection<CardViewModel>(
                     game.Cards.Select((cs, i) =>
                     {
                          var card = new CardViewModel(cs.ImagePath, Columns);
                          card.Index = i;
-                        // Restaurează starea salvată:
 
                          card.IsMatched = cs.IsMatched;
-                        // Dacă cardul este matched, păstrăm și starea flipuită; altfel, îl punem întotdeauna ca ne-flipuit.
                          card.IsFlipped = cs.IsMatched ? cs.IsFlipped : false;
-                        // Notificăm UI-ul pentru actualizare:
+
                          card.OnPropertyChanged(nameof(card.IsFlipped));
                          card.OnPropertyChanged(nameof(card.IsMatched));
                          card.OnPropertyChanged(nameof(card.ShowFront));
@@ -88,33 +83,28 @@ namespace MemoryGame.ViewModels
             }
 
             CardFlipCommand = new RelayCommand(async (param) => await OnCardFlipped(param));
-            PauseCommand = new RelayCommand(OpenPauseWindow); // ADĂUGĂ LINIA ASTA**
+            PauseCommand = new RelayCommand(OpenPauseWindow); 
             StartTimer();
         }
 
 
         public void PauseTimer()
         {
-            // Oprește timerul dacă e pornit
             if (_timer != null)
                 _timer.Stop();
         }
 
         public void ResumeTimer()
         {
-            // Reia timerul dacă e oprit
             if (_timer != null)
                 _timer.Start();
         }
 
         public Game GetCurrentGameState()
         {
-            // Creează un obiect Game cu starea curentă
-            // (modul, level, size, time, carduri)
+
             return new Game
             {
-                // Dacă CurrentGame nu e null, preluăm Level și Module de acolo.
-                // Sau, dacă preferi, poți folosi direct proprietăți separate.
                 Level = CurrentGame != null ? CurrentGame.Level : "",
                 Module = CurrentGame != null ? CurrentGame.Module : "",
                 Rows = Rows,
@@ -124,11 +114,11 @@ namespace MemoryGame.ViewModels
                 {
                     ImagePath = c.FrontImage,
                     IsFlipped = c.IsFlipped,
-                    IsMatched = c.IsMatched,     // <-- Adaugă această linie
+                    IsMatched = c.IsMatched,
                     Row = c.Row,
                     Column = c.Column
-                }).ToList()
-
+                }).ToList(),
+                IsSaved = CurrentGame?.IsSaved ?? false
             };
         }
 
@@ -138,25 +128,43 @@ namespace MemoryGame.ViewModels
             _timer.Interval = TimeSpan.FromSeconds(1);
             _timer.Tick += (s, e) =>
             {
+                if (Cards.All(c => c.IsMatched) && TimeRemaining > 0)
+                {
+                    _timer.Stop();
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        var winView = new Views.WinView();
+                        var winVM = new WinViewModel(CurrentUser, GetCurrentGameState());
+                        winView.DataContext = winVM;
+                        winView.Show();
+                        IsForcedQuit = false;
+                        foreach (Window window in Application.Current.Windows.OfType<Window>().ToList())
+                        {
+                            if (window != winView)
+                            {
+                                window.Close();
+                            }
+                        }
+                    });
+                }
                 if (TimeRemaining > 0)
                     TimeRemaining--;
                 else
                 {
                     _timer.Stop();
-                    // Deschide fereastra de Game Over pe thread-ul UI
+
                     Application.Current.Dispatcher.Invoke(() =>
                     {
                         var gameOverView = new Views.GameOverView();
                         var gameOverVM = new GameOverViewModel(CurrentUser, CurrentGame ?? new Game { Rows = Rows, Columns = Columns, TimeRemaining = 0 });
                         gameOverView.DataContext = gameOverVM;
                         gameOverView.Show();
-                        // Închide fereastra de joc
-                        foreach (Window window in Application.Current.Windows)
+                        IsForcedQuit = false;
+                        foreach (Window window in Application.Current.Windows.OfType<Window>().ToList())
                         {
-                            if (window is Views.GameView)
+                            if (window != gameOverView)
                             {
                                 window.Close();
-                                break;
                             }
                         }
                     });
@@ -166,7 +174,6 @@ namespace MemoryGame.ViewModels
         }
 
 
-        // Metoda OnCardFlipped rămâne la fel, doar scoți logica cu CurrentImage
         private async Task OnCardFlipped(object parameter)
         {
             if (_isChecking) return;
@@ -174,7 +181,7 @@ namespace MemoryGame.ViewModels
             {
                 if (card.IsFlipped || card.IsMatched) return;
 
-                card.Flip(); // Doar togglăm IsFlipped
+                card.Flip();
 
                 if (_firstFlippedCard == null)
                 {
@@ -202,29 +209,27 @@ namespace MemoryGame.ViewModels
             if (Cards.All(c => c.IsMatched))
             {
                 _timer.Stop();
-                // Deschide fereastra de Win pe thread-ul UI
                 Application.Current.Dispatcher.Invoke(() =>
                 {
                     var winView = new Views.WinView();
                     var winVM = new WinViewModel(CurrentUser, GetCurrentGameState());
                     winView.DataContext = winVM;
                     winView.Show();
-                    // Închide fereastra de joc
-                    foreach (Window window in Application.Current.Windows)
+                    IsForcedQuit = false;
+                    foreach (Window window in Application.Current.Windows.OfType<Window>().ToList())
                     {
-                        if (window is Views.GameView)
+                        if (window != winView)
                         {
                             window.Close();
-                            break;
                         }
                     }
                 });
             }
         }
-        // Metoda pentru deschiderea ferestrei de pauză
+
         private void OpenPauseWindow(object parameter)
         {
-            PauseTimer();
+            PauseTimer(); IsForcedQuit = false;
             var pauseWindow = new Views.PauseWindow();
             pauseWindow.DataContext = new PauseViewModel(CurrentUser, this);
             pauseWindow.ShowDialog();
@@ -313,10 +318,41 @@ namespace MemoryGame.ViewModels
 
                 case "Fruits":
                     return new ObservableCollection<string>
-            {
-                "ImagesFruits/fruit1.png", "ImagesFruits/fruit2.png"
-                // etc.
-            };
+                {
+                    "ImagesFruits/fruit1.jpg",  "ImagesFruits/fruit2.jpg",  "ImagesFruits/fruit3.jpg",
+                    "ImagesFruits/fruit4.jpg",  "ImagesFruits/fruit5.jpg",  "ImagesFruits/fruit6.jpg",
+                    "ImagesFruits/fruit7.jpg",  "ImagesFruits/fruit8.jpg",  "ImagesFruits/fruit9.jpg",
+                    "ImagesFruits/fruit10.jpg", "ImagesFruits/fruit11.jpg", "ImagesFruits/fruit12.jpg",
+                    "ImagesFruits/fruit13.jpg", "ImagesFruits/fruit14.jpg", "ImagesFruits/fruit15.jpg",
+                    "ImagesFruits/fruit16.jpg", "ImagesFruits/fruit17.jpg", "ImagesFruits/fruit18.jpg",
+                    "ImagesFruits/fruit19.jpg", "ImagesFruits/fruit20.jpg", "ImagesFruits/fruit21.jpg",
+                    "ImagesFruits/fruit22.jpg", "ImagesFruits/fruit23.jpg", "ImagesFruits/fruit24.jpg",
+                    "ImagesFruits/fruit25.jpg", "ImagesFruits/fruit26.jpg", "ImagesFruits/fruit27.jpg",
+                    "ImagesFruits/fruit28.jpg", "ImagesFruits/fruit29.jpg", "ImagesFruits/fruit30.jpg",
+                    "ImagesFruits/fruit31.jpg", "ImagesFruits/fruit32.jpg", "ImagesFruits/fruit33.jpg",
+                    "ImagesFruits/fruit34.jpg", "ImagesFruits/fruit35.jpg", "ImagesFruits/fruit36.jpg",
+                    "ImagesFruits/fruit37.jpg", "ImagesFruits/fruit38.jpg", "ImagesFruits/fruit39.jpg",
+                    "ImagesFruits/fruit40.jpg", "ImagesFruits/fruit41.jpg", "ImagesFruits/fruit42.jpg",
+                    "ImagesFruits/fruit43.jpg", "ImagesFruits/fruit44.jpg", "ImagesFruits/fruit45.jpg",
+                    "ImagesFruits/fruit46.jpg", "ImagesFruits/fruit47.jpg", "ImagesFruits/fruit48.jpg",
+                    "ImagesFruits/fruit49.jpg", "ImagesFruits/fruit50.jpg", "ImagesFruits/fruit51.jpg",
+                    "ImagesFruits/fruit52.jpg", "ImagesFruits/fruit53.jpg", "ImagesFruits/fruit54.jpg",
+                    "ImagesFruits/fruit55.jpg", "ImagesFruits/fruit56.jpg", "ImagesFruits/fruit57.jpg",
+                    "ImagesFruits/fruit58.jpg", "ImagesFruits/fruit59.jpg", "ImagesFruits/fruit60.jpg",
+                    "ImagesFruits/fruit61.jpg", "ImagesFruits/fruit62.jpg", "ImagesFruits/fruit63.jpg",
+                    "ImagesFruits/fruit64.jpg", "ImagesFruits/fruit65.jpg", "ImagesFruits/fruit66.jpg",
+                    "ImagesFruits/fruit67.jpg", "ImagesFruits/fruit68.jpg", "ImagesFruits/fruit69.jpg",
+                    "ImagesFruits/fruit70.jpg", "ImagesFruits/fruit71.jpg", "ImagesFruits/fruit72.jpg",
+                    "ImagesFruits/fruit73.jpg", "ImagesFruits/fruit74.jpg", "ImagesFruits/fruit75.jpg",
+                    "ImagesFruits/fruit76.jpg", "ImagesFruits/fruit77.jpg", "ImagesFruits/fruit78.jpg",
+                    "ImagesFruits/fruit79.jpg", "ImagesFruits/fruit80.jpg", "ImagesFruits/fruit81.jpg",
+                    "ImagesFruits/fruit82.jpg", "ImagesFruits/fruit83.jpg", "ImagesFruits/fruit84.jpg",
+                    "ImagesFruits/fruit85.jpg", "ImagesFruits/fruit86.jpg", "ImagesFruits/fruit87.jpg",
+                    "ImagesFruits/fruit88.jpg", "ImagesFruits/fruit89.jpg", "ImagesFruits/fruit90.jpg",
+                    "ImagesFruits/fruit91.jpg", "ImagesFruits/fruit92.jpg", "ImagesFruits/fruit93.jpg",
+                    "ImagesFruits/fruit94.jpg", "ImagesFruits/fruit95.jpg"
+                };
+
                 case "Vegetables":
                     return new ObservableCollection<string>
                 {
@@ -345,10 +381,43 @@ namespace MemoryGame.ViewModels
 
                 case "Rocks":
                     return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                {
+                    "ImagesRocks/rock1.jpg",  "ImagesRocks/rock2.jpg",  "ImagesRocks/rock3.jpg",
+                    "ImagesRocks/rock4.jpg",  "ImagesRocks/rock5.jpg",  "ImagesRocks/rock6.jpg",
+                    "ImagesRocks/rock7.jpg",  "ImagesRocks/rock8.jpg",  "ImagesRocks/rock9.jpg",
+                    "ImagesRocks/rock10.jpg", "ImagesRocks/rock11.jpg", "ImagesRocks/rock12.jpg",
+                    "ImagesRocks/rock13.jpg", "ImagesRocks/rock14.jpg", "ImagesRocks/rock15.jpg",
+                    "ImagesRocks/rock16.jpg", "ImagesRocks/rock17.jpg", "ImagesRocks/rock18.jpg",
+                    "ImagesRocks/rock19.jpg", "ImagesRocks/rock20.jpg", "ImagesRocks/rock21.jpg",
+                    "ImagesRocks/rock22.jpg", "ImagesRocks/rock23.jpg", "ImagesRocks/rock24.jpg",
+                    "ImagesRocks/rock25.jpg", "ImagesRocks/rock26.jpg", "ImagesRocks/rock27.jpg",
+                    "ImagesRocks/rock28.jpg", "ImagesRocks/rock29.jpg", "ImagesRocks/rock30.jpg",
+                    "ImagesRocks/rock31.jpg", "ImagesRocks/rock32.jpg", "ImagesRocks/rock33.jpg",
+                    "ImagesRocks/rock34.jpg", "ImagesRocks/rock35.jpg", "ImagesRocks/rock36.jpg",
+                    "ImagesRocks/rock37.jpg", "ImagesRocks/rock38.jpg", "ImagesRocks/rock39.jpg",
+                    "ImagesRocks/rock40.jpg", "ImagesRocks/rock41.jpg", "ImagesRocks/rock42.jpg",
+                    "ImagesRocks/rock43.jpg", "ImagesRocks/rock44.jpg", "ImagesRocks/rock45.jpg",
+                    "ImagesRocks/rock46.jpg", "ImagesRocks/rock47.jpg", "ImagesRocks/rock48.jpg",
+                    "ImagesRocks/rock49.jpg", "ImagesRocks/rock50.jpg", "ImagesRocks/rock51.jpg",
+                    "ImagesRocks/rock52.jpg", "ImagesRocks/rock53.jpg", "ImagesRocks/rock54.jpg",
+                    "ImagesRocks/rock55.jpg", "ImagesRocks/rock56.jpg", "ImagesRocks/rock57.jpg",
+                    "ImagesRocks/rock58.jpg", "ImagesRocks/rock59.jpg", "ImagesRocks/rock60.jpg",
+                    "ImagesRocks/rock61.jpg", "ImagesRocks/rock62.jpg", "ImagesRocks/rock63.jpg",
+                    "ImagesRocks/rock64.jpg", "ImagesRocks/rock65.jpg", "ImagesRocks/rock66.jpg",
+                    "ImagesRocks/rock67.jpg", "ImagesRocks/rock68.jpg", "ImagesRocks/rock69.jpg",
+                    "ImagesRocks/rock70.jpg", "ImagesRocks/rock71.jpg", "ImagesRocks/rock72.jpg",
+                    "ImagesRocks/rock73.jpg", "ImagesRocks/rock74.jpg", "ImagesRocks/rock75.jpg",
+                    "ImagesRocks/rock76.jpg", "ImagesRocks/rock77.jpg", "ImagesRocks/rock78.jpg",
+                    "ImagesRocks/rock79.jpg", "ImagesRocks/rock80.jpg", "ImagesRocks/rock81.jpg",
+                    "ImagesRocks/rock82.jpg", "ImagesRocks/rock83.jpg", "ImagesRocks/rock84.jpg",
+                    "ImagesRocks/rock85.jpg", "ImagesRocks/rock86.jpg", "ImagesRocks/rock87.jpg",
+                    "ImagesRocks/rock88.jpg", "ImagesRocks/rock89.jpg", "ImagesRocks/rock90.jpg",
+                    "ImagesRocks/rock91.jpg", "ImagesRocks/rock92.jpg", "ImagesRocks/rock93.jpg",
+                    "ImagesRocks/rock94.jpg", "ImagesRocks/rock95.jpg", "ImagesRocks/rock96.jpg",
+                    "ImagesRocks/rock97.jpg", "ImagesRocks/rock98.jpg", "ImagesRocks/rock99.jpg",
+                    "ImagesRocks/rock100.jpg","ImagesRocks/rock101.jpg","ImagesRocks/rock102.jpg"
+                };
+
                 case "Landscapes":
                     return new ObservableCollection<string>
             {
@@ -419,7 +488,6 @@ namespace MemoryGame.ViewModels
             var rnd = new Random();
             var selectedImages = new List<string>();
 
-            // Dacă sunt destule imagini distincte, le selectează aleatoriu
             if (availableImages.Count >= pairCount)
             {
                 selectedImages = availableImages.OrderBy(x => rnd.Next())
@@ -428,7 +496,6 @@ namespace MemoryGame.ViewModels
             }
             else
             {
-                // Dacă nu sunt suficiente, alege aleatoriu (cu posibilitatea de repetare)
                 for (int i = 0; i < pairCount; i++)
                 {
                     int index = rnd.Next(availableImages.Count);
@@ -436,7 +503,6 @@ namespace MemoryGame.ViewModels
                 }
             }
 
-            // Dublează imaginile pentru a obține perechi și le amestecă
             var cardImages = selectedImages.Concat(selectedImages)
                                            .OrderBy(x => rnd.Next())
                                            .ToList();
