@@ -287,7 +287,14 @@ namespace MemoryGame.ViewModels
         public int Rows
         {
             get => _rows;
-            set { _rows = value; OnPropertyChanged(nameof(Rows));
+            set {
+                if (SelectedLevel == "Custom Mode" && _columns % 2 != 0 && value % 2 != 0)
+                {
+                    MessageBox.Show("Cannot set both Rows and Columns to odd numbers in Custom Mode!",
+                        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return; 
+                }
+                _rows = value; OnPropertyChanged(nameof(Rows));
                 Settings.Default.LastRows = _rows;
                 Settings.Default.Save();
             }
@@ -296,7 +303,14 @@ namespace MemoryGame.ViewModels
         public int Columns
         {
             get => _columns;
-            set { _columns = value; OnPropertyChanged(nameof(Columns));
+            set {
+                if (SelectedLevel == "Custom Mode" && _rows % 2 != 0 && value % 2 != 0)
+                {
+                    MessageBox.Show("Cannot set both Rows and Columns to odd numbers in Custom Mode!",
+                        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                _columns = value; OnPropertyChanged(nameof(Columns));
                 Settings.Default.LastColumns = _columns;
                 Settings.Default.Save();
             }
@@ -318,6 +332,15 @@ namespace MemoryGame.ViewModels
 
         private void PlayGame(object parameter)
         {
+            // This is another verification but will never get to this one!
+            if ((Rows * Columns) % 2 != 0)
+            {
+                MessageBox.Show("The product of rows and columns must be even.\n" +
+                    "Please adjust the values (either both even or one even and one odd).",
+                    "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             Game newGame = new Game
             {
                 Level = SelectedLevel,

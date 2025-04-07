@@ -45,10 +45,10 @@
                                 </Grid>
                                 <ControlTemplate.Triggers>
                                     <DataTrigger Binding="{Binding ShowFront}" Value="False">
-                                        <Setter TargetName="CardImage" Property="Source" Value="../ImagesCards/default_card_front.png"/>
+                                        <Setter TargetName="CardImage" Property="Source" Value="{Binding FrontImage}"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding ShowFront}" Value="True">
-                                        <Setter TargetName="CardImage" Property="Source" Value="{Binding FrontImage}"/>
+                                        <Setter TargetName="CardImage" Property="Source" Value="{Binding BackImage}"/>
                                     </DataTrigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>

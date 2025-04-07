@@ -93,6 +93,9 @@
     <None Remove="ImagesAnimals\animal8.png" />
     <None Remove="ImagesAnimals\animal9.png" />
     <None Remove="ImagesCards\default_card_front.png" />
+    <None Remove="ImagesCards\default_card_front1.png" />
+    <None Remove="ImagesCards\default_card_front2.png" />
+    <None Remove="ImagesCards\default_card_front3.png" />
     <None Remove="ImagesFlowers\flower1.png" />
     <None Remove="ImagesFlowers\flower10.png" />
     <None Remove="ImagesFlowers\flower11.png" />
@@ -259,6 +262,72 @@
     <None Remove="ImagesFruits\fruit93.jpg" />
     <None Remove="ImagesFruits\fruit94.jpg" />
     <None Remove="ImagesFruits\fruit95.jpg" />
+    <None Remove="ImagesLandScapes\landscape1.jpg" />
+    <None Remove="ImagesLandScapes\landscape10.jpg" />
+    <None Remove="ImagesLandScapes\landscape11.jpg" />
+    <None Remove="ImagesLandScapes\landscape12.jpg" />
+    <None Remove="ImagesLandScapes\landscape13.jpg" />
+    <None Remove="ImagesLandScapes\landscape14.jpg" />
+    <None Remove="ImagesLandScapes\landscape15.jpg" />
+    <None Remove="ImagesLandScapes\landscape16.jpg" />
+    <None Remove="ImagesLandScapes\landscape17.jpg" />
+    <None Remove="ImagesLandScapes\landscape18.jpg" />
+    <None Remove="ImagesLandScapes\landscape19.jpg" />
+    <None Remove="ImagesLandScapes\landscape2.jpg" />
+    <None Remove="ImagesLandScapes\landscape20.jpg" />
+    <None Remove="ImagesLandScapes\landscape21.jpg" />
+    <None Remove="ImagesLandScapes\landscape22.jpg" />
+    <None Remove="ImagesLandScapes\landscape23.jpg" />
+    <None Remove="ImagesLandScapes\landscape24.jpg" />
+    <None Remove="ImagesLandScapes\landscape25.jpg" />
+    <None Remove="ImagesLandScapes\landscape26.jpg" />
+    <None Remove="ImagesLandScapes\landscape27.jpg" />
+    <None Remove="ImagesLandScapes\landscape28.jpg" />
+    <None Remove="ImagesLandScapes\landscape29.jpg" />
+    <None Remove="ImagesLandScapes\landscape3.jpg" />
+    <None Remove="ImagesLandScapes\landscape30.jpg" />
+    <None Remove="ImagesLandScapes\landscape31.jpg" />
+    <None Remove="ImagesLandScapes\landscape32.jpg" />
+    <None Remove="ImagesLandScapes\landscape33.jpg" />
+    <None Remove="ImagesLandScapes\landscape34.jpg" />
+    <None Remove="ImagesLandScapes\landscape35.jpg" />
+    <None Remove="ImagesLandScapes\landscape36.jpg" />
+    <None Remove="ImagesLandScapes\landscape37.jpg" />
+    <None Remove="ImagesLandScapes\landscape38.jpg" />
+    <None Remove="ImagesLandScapes\landscape39.jpg" />
+    <None Remove="ImagesLandScapes\landscape4.jpg" />
+    <None Remove="ImagesLandScapes\landscape40.jpg" />
+    <None Remove="ImagesLandScapes\landscape41.jpg" />
+    <None Remove="ImagesLandScapes\landscape42.jpg" />
+    <None Remove="ImagesLandScapes\landscape43.jpg" />
+    <None Remove="ImagesLandScapes\landscape44.jpg" />
+    <None Remove="ImagesLandScapes\landscape45.jpg" />
+    <None Remove="ImagesLandScapes\landscape46.jpg" />
+    <None Remove="ImagesLandScapes\landscape47.jpg" />
+    <None Remove="ImagesLandScapes\landscape48.jpg" />
+    <None Remove="ImagesLandScapes\landscape49.jpg" />
+    <None Remove="ImagesLandScapes\landscape5.jpg" />
+    <None Remove="ImagesLandScapes\landscape50.jpg" />
+    <None Remove="ImagesLandScapes\landscape51.jpg" />
+    <None Remove="ImagesLandScapes\landscape52.jpg" />
+    <None Remove="ImagesLandScapes\landscape53.jpg" />
+    <None Remove="ImagesLandScapes\landscape54.jpg" />
+    <None Remove="ImagesLandScapes\landscape55.jpg" />
+    <None Remove="ImagesLandScapes\landscape56.jpg" />
+    <None Remove="ImagesLandScapes\landscape57.jpg" />
+    <None Remove="ImagesLandScapes\landscape58.jpg" />
+    <None Remove="ImagesLandScapes\landscape59.jpg" />
+    <None Remove="ImagesLandScapes\landscape6.jpg" />
+    <None Remove="ImagesLandScapes\landscape60.jpg" />
+    <None Remove="ImagesLandScapes\landscape61.jpg" />
+    <None Remove="ImagesLandScapes\landscape62.jpg" />
+    <None Remove="ImagesLandScapes\landscape63.jpg" />
+    <None Remove="ImagesLandScapes\landscape64.jpg" />
+    <None Remove="ImagesLandScapes\landscape65.jpg" />
+    <None Remove="ImagesLandScapes\landscape66.jpg" />
+    <None Remove="ImagesLandScapes\landscape7.jpg" />
+    <None Remove="ImagesLandScapes\landscape8.jpg" />
+    <None Remove="ImagesLandScapes\landscape9.jpg" />
     <None Remove="ImagesRocks\rock1.jpg" />
     <None Remove="ImagesRocks\rock10.jpg" />
     <None Remove="ImagesRocks\rock100.jpg" />
@@ -361,6 +430,10 @@
     <None Remove="ImagesRocks\rock97.jpg" />
     <None Remove="ImagesRocks\rock98.jpg" />
     <None Remove="ImagesRocks\rock99.jpg" />
+    <None Remove="ImagesSorry\sorry1.png" />
+    <None Remove="ImagesSorry\sorry2.png" />
+    <None Remove="ImagesSorry\sorry3.png" />
+    <None Remove="ImagesSorry\sorry4.png" />
     <None Remove="ImagesTrees\tree1.jpg" />
     <None Remove="ImagesTrees\tree10.jpg" />
     <None Remove="ImagesTrees\tree11.jpg" />
@@ -502,6 +575,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ImagesCards\default_card_front1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesCards\default_card_front2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesCards\default_card_front3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ImagesFruits\fruit58.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1222,6 +1304,204 @@
     <Content Include="ImagesFruits\fruit95.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ImagesLandScapes\landscape1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape14.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape15.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape18.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape19.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape20.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape23.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape24.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape25.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape26.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape27.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape28.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape30.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape31.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape33.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape34.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape35.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape36.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape37.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape38.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape39.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape40.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape41.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape42.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape43.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape44.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape45.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape46.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape47.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape48.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape49.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape50.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape51.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape53.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape54.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape55.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape56.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape57.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape58.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape59.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape60.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape61.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape62.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape63.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape64.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape65.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape66.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesLandScapes\landscape9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ImagesRocks\rock1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1523,6 +1803,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ImagesRocks\rock99.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesSorry\sorry1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesSorry\sorry2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesSorry\sorry3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesSorry\sorry4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ImagesTrees\tree1.jpg">

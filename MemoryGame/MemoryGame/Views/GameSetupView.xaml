@@ -47,6 +47,7 @@
                 <ComboBoxItem Content="Buildings"/>
                 <ComboBoxItem Content="Motorcycle"/>
                 <ComboBoxItem Content="Cars"/>
+                <ComboBoxItem Content="Tools"/>
                 <ComboBoxItem Content="Random"/>
             </ComboBox>
 

@@ -112,7 +112,7 @@ namespace MemoryGame.ViewModels
                 TimeRemaining = TimeRemaining,
                 Cards = Cards.Select(c => new CardState
                 {
-                    ImagePath = c.FrontImage,
+                    ImagePath = c.BackImage,
                     IsFlipped = c.IsFlipped,
                     IsMatched = c.IsMatched,
                     Row = c.Row,
@@ -189,7 +189,7 @@ namespace MemoryGame.ViewModels
                 }
                 else if (_firstFlippedCard != card)
                 {
-                    if (_firstFlippedCard.FrontImage == card.FrontImage)
+                    if (_firstFlippedCard.BackImage == card.BackImage)
                     {
                         _firstFlippedCard.SetMatched(true);
                         card.SetMatched(true);
@@ -420,34 +420,46 @@ namespace MemoryGame.ViewModels
 
                 case "Landscapes":
                     return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                {
+                    "ImagesLandscapes/landscape1.jpg",  "ImagesLandscapes/landscape2.jpg",  "ImagesLandscapes/landscape3.jpg",
+                    "ImagesLandscapes/landscape4.jpg",  "ImagesLandscapes/landscape5.jpg",  "ImagesLandscapes/landscape6.jpg",
+                    "ImagesLandscapes/landscape7.jpg",  "ImagesLandscapes/landscape8.jpg",  "ImagesLandscapes/landscape9.jpg",
+                    "ImagesLandscapes/landscape10.jpg", "ImagesLandscapes/landscape11.jpg", "ImagesLandscapes/landscape12.jpg",
+                    "ImagesLandscapes/landscape13.jpg", "ImagesLandscapes/landscape14.jpg", "ImagesLandscapes/landscape15.jpg",
+                    "ImagesLandscapes/landscape16.jpg", "ImagesLandscapes/landscape17.jpg", "ImagesLandscapes/landscape18.jpg",
+                    "ImagesLandscapes/landscape19.jpg", "ImagesLandscapes/landscape20.jpg", "ImagesLandscapes/landscape21.jpg",
+                    "ImagesLandscapes/landscape22.jpg", "ImagesLandscapes/landscape23.jpg", "ImagesLandscapes/landscape24.jpg",
+                    "ImagesLandscapes/landscape25.jpg", "ImagesLandscapes/landscape26.jpg", "ImagesLandscapes/landscape27.jpg",
+                    "ImagesLandscapes/landscape28.jpg", "ImagesLandscapes/landscape29.jpg", "ImagesLandscapes/landscape30.jpg",
+                    "ImagesLandscapes/landscape31.jpg", "ImagesLandscapes/landscape32.jpg", "ImagesLandscapes/landscape33.jpg",
+                    "ImagesLandscapes/landscape34.jpg", "ImagesLandscapes/landscape35.jpg", "ImagesLandscapes/landscape36.jpg",
+                    "ImagesLandscapes/landscape37.jpg", "ImagesLandscapes/landscape38.jpg", "ImagesLandscapes/landscape39.jpg",
+                    "ImagesLandscapes/landscape40.jpg", "ImagesLandscapes/landscape41.jpg", "ImagesLandscapes/landscape42.jpg",
+                    "ImagesLandscapes/landscape43.jpg", "ImagesLandscapes/landscape44.jpg", "ImagesLandscapes/landscape45.jpg",
+                    "ImagesLandscapes/landscape46.jpg", "ImagesLandscapes/landscape47.jpg", "ImagesLandscapes/landscape48.jpg",
+                    "ImagesLandscapes/landscape49.jpg", "ImagesLandscapes/landscape50.jpg", "ImagesLandscapes/landscape51.jpg",
+                    "ImagesLandscapes/landscape52.jpg", "ImagesLandscapes/landscape53.jpg", "ImagesLandscapes/landscape54.jpg",
+                    "ImagesLandscapes/landscape55.jpg", "ImagesLandscapes/landscape56.jpg", "ImagesLandscapes/landscape57.jpg",
+                    "ImagesLandscapes/landscape58.jpg", "ImagesLandscapes/landscape59.jpg", "ImagesLandscapes/landscape60.jpg",
+                    "ImagesLandscapes/landscape61.jpg", "ImagesLandscapes/landscape62.jpg", "ImagesLandscapes/landscape63.jpg",
+                    "ImagesLandscapes/landscape64.jpg", "ImagesLandscapes/landscape65.jpg", "ImagesLandscapes/landscape66.jpg"
+                };
+
                 case "Buildings":
-                    return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                    MessageBox.Show("This category does not have the images yet! Come back tomorrow=))");
+                    return new ObservableCollection<string>{"ImagesSorry/sorry1.png", "ImagesSorry/sorry2.png", "ImagesSorry/sorry3.png", "ImagesSorry/sorry4.png" };
                 case "Motorcycle":
-                    return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                    MessageBox.Show("This category does not have the images yet! Come back tomorrow=))");
+                    return new ObservableCollection<string> { "ImagesSorry/sorry1.png", "ImagesSorry/sorry2.png", "ImagesSorry/sorry3.png", "ImagesSorry/sorry4.png" };
                 case "Cars":
-                    return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                    MessageBox.Show("This category does not have the images yet! Come back tomorrow=))");
+                    return new ObservableCollection<string> { "ImagesSorry/sorry1.png", "ImagesSorry/sorry2.png", "ImagesSorry/sorry3.png", "ImagesSorry/sorry4.png" };
+                case "Tool":
+                    MessageBox.Show("This category does not have the images yet! Come back tomorrow=))");
+                    return new ObservableCollection<string> { "ImagesSorry/sorry1.png", "ImagesSorry/sorry2.png", "ImagesSorry/sorry3.png", "ImagesSorry/sorry4.png" };
                 case "Random":
-                    return new ObservableCollection<string>
-            {
-                "ImagesRocks/rock1.png", "ImagesRocks/rock2.png"
-                // etc.
-            };
+                    MessageBox.Show("This category does not have the images yet! Come back tomorrow=))");
+                   return new ObservableCollection<string>{"ImagesSorry/sorry1.png", "ImagesSorry/sorry2.png", "ImagesSorry/sorry3.png", "ImagesSorry/sorry4.png" };
                 default:
                     return new ObservableCollection<string>
                 {

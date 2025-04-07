@@ -15,9 +15,8 @@
                 <Button Content="By Mode" Command="{Binding ShowModeCommand}" Margin="5"
                         Style="{DynamicResource ButtonStyle}"/>
             </StackPanel>
-            <DataGrid ItemsSource="{Binding DisplayStats}" AutoGenerateColumns="True" Margin="0,10,0,0"
-                      Background="White"
-                      Foreground="Black"/>
+            <DataGrid ItemsSource="{Binding DisplayStats}" AutoGenerateColumns="True" Margin="0,10,0,0" Background="White" Foreground="Black" Grid.Row="1"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" MaxHeight="300"/>
         </StackPanel>
     </Grid>
 </Window>

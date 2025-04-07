@@ -27,12 +27,12 @@
   },
   {
     "UserName": "test",
-    "TotalGames": 55,
-    "Wins": 38,
+    "TotalGames": 75,
+    "Wins": 58,
     "Losses": 17,
     "Difficulties": {
       "Custom Mode": {
-        "Wins": 37,
+        "Wins": 58,
         "Losses": 16
       },
       "Easy Mode": {
@@ -42,7 +42,7 @@
     },
     "Categories": {
       "Trees": {
-        "Wins": 27,
+        "Wins": 46,
         "Losses": 5
       },
       "Flowers": {
@@ -50,6 +50,10 @@
         "Losses": 12
       },
       "Fruits": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Landscapes": {
         "Wins": 1,
         "Losses": 0
       }
@@ -262,6 +266,32 @@
       "Flowers": {
         "Wins": 2,
         "Losses": 0
+      }
+    }
+  },
+  {
+    "UserName": "denis",
+    "TotalGames": 3,
+    "Wins": 2,
+    "Losses": 1,
+    "Difficulties": {
+      "Medium Mode": {
+        "Wins": 1,
+        "Losses": 0
+      },
+      "Hard Mode": {
+        "Wins": 0,
+        "Losses": 1
+      },
+      "Custom Mode": {
+        "Wins": 1,
+        "Losses": 0
+      }
+    },
+    "Categories": {
+      "Rocks": {
+        "Wins": 2,
+        "Losses": 1
       }
     }
   }

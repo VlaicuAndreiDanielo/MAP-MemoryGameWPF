@@ -26,7 +26,7 @@ namespace MemoryGame.Service
             }
             UserManager.SaveUsers(users);
             CommandManager.InvalidateRequerySuggested();
-            MessageBox.Show("Jocul salvat a fost șters!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Saved game was deleted!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 

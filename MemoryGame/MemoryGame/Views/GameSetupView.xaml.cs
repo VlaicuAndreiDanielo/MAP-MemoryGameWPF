@@ -20,5 +20,13 @@ namespace MemoryGame.Views
         {
             InitializeComponent();
         }
+        protected override void OnClosed(EventArgs e)
+        {
+            if (Application.Current.Windows.Count < 2)
+            {
+                var loginView = new LoginView();
+                loginView.Show();
+            }
+        }
     }
 }
