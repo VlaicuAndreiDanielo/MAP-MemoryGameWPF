@@ -24,7 +24,7 @@ Players can choose from the following image categories:
 - Tools  
 - Random → selects images from **all categories**
 
-> If a selected category does not yet have assigned cards, a placeholder image like _"Sorry, not added yet"_ will appear.
+If a selected category does not yet have assigned cards, a placeholder image like _"Sorry, not added yet"_ will appear.
 
 ---
 
@@ -46,10 +46,10 @@ Multiple difficulty levels are available to challenge the player’s memory:
 - God Mode  
 - Custom Mode → allows **manual input** for game settings
 
-> Only **Custom Mode** allows the player to manually adjust:
-> - Number of rows  
-> - Number of columns  
-> - Time limit
+Only **Custom Mode** allows the player to manually adjust:
+- Number of rows  
+- Number of columns  
+- Time limit
 
 ---
 
@@ -112,7 +112,7 @@ Users can personalize the visual style of the game using pre-defined themes, all
 - `SunnyYellowTheme.xaml`  
 - `TotalDarknessTheme.xaml`  
 
-> Themes apply instantly to the entire UI and enhance the user experience through visual customization.
+Themes apply instantly to the entire UI and enhance the user experience through visual customization.
 
 ---
 
@@ -140,7 +140,7 @@ This project follows the **MVVM (Model-View-ViewModel)** pattern for a clean sep
 
 ---
 
-> 💡 **Tip**: For best experience, play in full screen with a high-difficulty mode and random category!
+💡 **Tip**: For best experience, play in full screen with a high-difficulty mode and random category!
 
 ---
 
