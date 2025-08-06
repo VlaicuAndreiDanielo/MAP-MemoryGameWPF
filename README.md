@@ -76,24 +76,24 @@ The app includes several main user interfaces:
 ### 1. **Game Setup Window**
 - Allows users to choose category, game mode, and (if in custom mode) configure rows, columns, and timer.
 - Theme selector is also available here.
-- **Close button is disabled** to avoid accidental exits.
+- **Close button should be disabled** to avoid accidental exits.
 
 ### 2. **Game Window**
 - Displays the card grid with a countdown timer (if applicable).
 - Cards flip on click to reveal images.
 - Game ends when all pairs are matched or time runs out.
-- **Close button is disabled**.
+- **Close button should be disabled**.
 
 ### 3. **Game Won Window**
 - Shown when the player wins the game.
 - Displays time taken and statistics.
 - Option to play again or return to main menu.
-- **Close button is disabled**.
+- **Close button should be disabled**.
 
 ### 4. **Game Lost Window**
 - Appears if the player runs out of time.
 - Option to retry or return to main menu.
-- **Close button is disabled**.
+- **Close button should be disabled**.
 
 ---
 
